@@ -1,8 +1,12 @@
-## Welcome to GitHub Pages
+Пакет подключаемых модулей (Plug-in) и действий процессов (Workflow) для расширения стандартного функционала платформы Microsoft Dynamics 365.
+
+## Скачать
 
 You can use the [editor on GitHub](https://github.com/ZooY/Dynamics365.Tools/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+# Состав пакета
 
 ### Markdown
 
