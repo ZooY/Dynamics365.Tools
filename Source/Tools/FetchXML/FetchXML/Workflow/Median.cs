@@ -49,6 +49,7 @@ namespace PZone.FetchXmlTools.Workflow
         [Output("Result as Money")]
         public OutArgument<Money> ResultAsMoney { get; set; }
 
+
         /// <inheritdoc />
         protected override void Execute(Context context)
         {
