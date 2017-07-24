@@ -1,0 +1,406 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PZone.Core</name>
+    </assembly>
+    <members>
+        <member name="T:PZone.CurrencyInfo">
+            <summary>
+            Информация о валюте.
+            </summary>
+        </member>
+        <member name="P:PZone.CurrencyInfo.Culture">
+            <summary>
+            Язык всех текстов с информацией о валюте. По умолчанию используется язык текущего потока.
+            </summary>
+        </member>
+        <member name="P:PZone.CurrencyInfo.IsoCode">
+            <summary>
+            Трехбуквенный код валюты в соответствии со стандартом ISO 4217.
+            </summary>
+        </member>
+        <member name="P:PZone.CurrencyInfo.IsoNumericCode">
+            <summary>
+            Числовой код валюты в соответствии со стандартом ISO 4217.
+            </summary>
+        </member>
+        <member name="P:PZone.CurrencyInfo.Name">
+            <summary>
+            Короткое наименование валюты? применяемое в обиходе.
+            </summary> 
+        </member>
+        <member name="P:PZone.CurrencyInfo.FullName">
+            <summary>
+            Полное наименование валюты.
+            </summary> 
+            <remarks>
+            Для русского языка полное наименование соответствует стандарту ОКВ (Общероссийский классификатор валют).
+            </remarks>
+        </member>
+        <member name="P:PZone.CurrencyInfo.Symbol">
+            <summary>
+            Символьное обозначение валюты.
+            </summary> 
+        </member>
+        <member name="P:PZone.CurrencyInfo.ExchangeRate">
+            <summary>
+            Курс валюты, по отношению к базовой.
+            </summary> 
+        </member>
+        <member name="M:PZone.CurrencyInfo.#ctor(System.String)">
+            <summary>
+            Конструтор класса.
+            </summary>
+            <param name="isoCode">Трехбуквенный код валюты в соответствии со стандартом ISO 4217.</param>
+            <remarks>
+            Все тексты возвращабтся на языке, установленном для текущего потока по умолчанию.
+            </remarks>
+        </member>
+        <member name="M:PZone.CurrencyInfo.#ctor(System.String,System.String)">
+            <summary>
+            Конструтор класса.
+            </summary>
+            <param name="isoCode">Трехбуквенный код валюты в соответствии со стандартом ISO 4217.</param>
+            <param name="cultureName">Язык всех текстов с информацией о валюте.</param>
+        </member>
+        <member name="M:PZone.CurrencyInfo.#ctor(PZone.Currencies)">
+            <summary>
+            Конструтор класса.
+            </summary>
+            <param name="currency">Значение валюты из перечисления <see cref="T:System.Currency"/>.</param>
+            <remarks>
+            Все тексты возвращабтся на языке, установленном для текущего потока по умолчанию.
+            </remarks>
+        </member>
+        <member name="M:PZone.CurrencyInfo.#ctor(PZone.Currencies,System.Globalization.CultureInfo)">
+            <summary>
+            Конструтор класса.
+            </summary>
+            <param name="currency">Значение валюты из перечисления <see cref="T:System.Currency"/>.</param>
+            <param name="culture">Язык всех текстов с информацией о валюте.</param>
+        </member>
+        <member name="M:PZone.CurrencyInfo.#ctor(PZone.Currencies,System.String)">
+            <summary>
+            Конструтор класса.
+            </summary>
+            <param name="currency">Значение валюты из перечисления <see cref="T:System.Currency"/>.</param>
+            <param name="cultureName">Язык всех текстов с информацией о валюте.</param>
+        </member>
+        <member name="M:PZone.CurrencyInfo.#ctor(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Конструтор класса.
+            </summary>
+            <param name="isoCode">Трехбуквенный код валюты в соответствии со стандартом ISO 4217.</param>
+            <param name="culture">Язык всех текстов с информацией о валюте.</param>
+        </member>
+        <member name="T:PZone.Exceptions.CommonException">
+            <summary>
+            Общая ошибка.
+            </summary>
+            <remarks>
+            <para>Данный тип ошибки используется в случае отсутсвия более подходящего типа ошибок.</para>
+            <para>Код ошибки: 0.</para>
+            </remarks>
+        </member>
+        <member name="P:PZone.Exceptions.CommonException.Code">
+            <summary>
+            Код ошибки.
+            </summary>
+        </member>
+        <member name="P:PZone.Exceptions.CommonException.Details">
+            <summary>
+            Технические подробности ошибки.
+            </summary>
+        </member>
+        <member name="P:PZone.Exceptions.CommonException.Solutions">
+            <summary>
+            Возможные варианты решения проблемы для пользователя системы.
+            </summary>
+        </member>
+        <member name="M:PZone.Exceptions.CommonException.#ctor(System.String)">
+            <summary>
+            Конструтор класса.
+            </summary>
+            <param name="message">Сообщение об ошибке для отображения пользователю.</param>
+        </member>
+        <member name="M:PZone.Exceptions.CommonException.#ctor(System.Int32,System.String)">
+            <summary>
+            Конструтор класса.
+            </summary>
+            <param name="code">Код ошибки</param>
+            <param name="message">Сообщение об ошибке для отображения пользователю.</param>
+        </member>
+        <member name="M:PZone.Exceptions.CommonException.#ctor(System.Int32,System.String,System.Exception)">
+            <summary>
+            Конструтор класса.
+            </summary>
+            <param name="code">Код ошибки.</param>
+            <param name="message">Сообщение об ошибке для отображения пользователю.</param>
+            <param name="exception">Вложенное исключение.</param>
+        </member>
+        <member name="M:PZone.Exceptions.CommonException.#ctor(System.Int32,System.String,System.String,System.Exception)">
+            <summary>
+            Конструтор класса.
+            </summary>
+            <param name="code">Код ошибки.</param>
+            <param name="message">Сообщение об ошибке для отображения пользователю.</param>
+            <param name="details">Технические подробности ошибки.</param>
+            <param name="exception">Вложенное исключение.</param>
+        </member>
+        <member name="T:PZone.Exceptions.IncorrectCodeUsageException">
+            <summary>
+            Ошибка использования компонентов кода.
+            </summary>
+            <remarks>
+            Ошибочное использование классов и программных конструкций.
+            </remarks>
+        </member>
+        <member name="M:PZone.Exceptions.IncorrectCodeUsageException.#ctor(System.String)">
+            <summary>
+            Конструтор класса.
+            </summary>
+            <param name="message">Сообщение об ошибке.</param>
+        </member>
+        <member name="T:PZone.Formatting.AmountInWords">
+            <summary>
+            Сумма прописью.
+            </summary>
+        </member>
+        <member name="P:PZone.Formatting.AmountInWords.WholeValueTemplate">
+            <summary>
+            Шаблон значения целой части числа.
+            </summary>
+        </member>
+        <member name="P:PZone.Formatting.AmountInWords.WholeCurrencyTemplate">
+            <summary>
+            Шаблон валюты челой части числа.
+            </summary>
+        </member>
+        <member name="P:PZone.Formatting.AmountInWords.WholeDelimiter">
+            <summary>
+            Разделитель значения и валюты целой части числа.
+            </summary>
+        </member>
+        <member name="P:PZone.Formatting.AmountInWords.FractionalValueTemplate">
+            <summary>
+            Шаблон значения дробной части числа.
+            </summary>
+        </member>
+        <member name="P:PZone.Formatting.AmountInWords.FractionalCurrencyTemplate">
+            <summary>
+            Шаблон валюты дробной части числа.
+            </summary>
+        </member>
+        <member name="P:PZone.Formatting.AmountInWords.FractionalDelimiter">
+            <summary>
+            Разделитель значения и валюты дробной части числа.
+            </summary>
+        </member>
+        <member name="P:PZone.Formatting.AmountInWords.WholeFractionalDelimiter">
+            <summary>
+            Разделитель целой и дробной частей числа.
+            </summary>
+        </member>
+        <member name="M:PZone.Formatting.AmountInWords.Execute(System.Decimal,PZone.Currencies,PZone.Formatting.AmountInWordsOptions)">
+            <summary>
+            Выполнение преобразования для числа, представленного типом <see cref="T:System.Decimal"/>.
+            </summary>
+            <param name="amount">Исходное число.</param>
+            <param name="currency">Валюта.</param>
+            <param name="options">Параметры преобразования.</param>
+            <returns>
+            Метод возвращает указанное число, написанное прописью.
+            </returns>
+        </member>
+        <member name="M:PZone.Formatting.AmountInWords.Execute(System.Single,PZone.Currencies,PZone.Formatting.AmountInWordsOptions)">
+            <summary>
+            Выполнение преобразования для числа, представленного типом <see cref="T:System.Single"/>.
+            </summary>
+            <param name="amount">Исходное число.</param>
+            <param name="currency">Валюта.</param>
+            <param name="options">Параметры преобразования.</param>
+            <returns>
+            Метод возвращает указанное число, написанное прописью.
+            </returns>
+        </member>
+        <member name="M:PZone.Formatting.AmountInWords.Execute(System.String,PZone.Currencies,PZone.Formatting.AmountInWordsOptions)">
+            <summary>
+            Выполнение преобразования для числа, представленного типом <see cref="T:System.String"/>.
+            </summary>
+            <param name="amount">Исходное число в виде строки.</param>
+            <param name="currency">Валюта.</param>
+            <param name="options">Параметры преобразования.</param>
+            <remarks>
+            Строка должна представлять собой корректное число, в котором целая и дробная части разделены символами "." (точка) или "," (запятая).
+            </remarks>
+            <returns>
+            Метод возвращает указанное число, написанное прописью.
+            </returns>
+        </member>
+        <member name="M:PZone.Formatting.AmountInWords.ProcessingRank(System.String,System.Int32,System.Collections.Generic.Dictionary{System.Char,System.String},System.Collections.Generic.IDictionary{System.Char,System.String})">
+            <summary>
+            Обработка одного разряда целой части числа.
+            </summary>
+            <param name="value">Целая часть числа.</param>
+            <param name="rankBorder">Левая граница разряда.</param>
+            <param name="units">Метки единичных значений.</param>
+            <param name="rankLabels">Метки разряда.</param>
+        </member>
+        <member name="F:PZone.Formatting.AmountInWords.CurrencyGender.Feminine">
+            <summary>
+            Женский.
+            </summary>
+        </member>
+        <member name="F:PZone.Formatting.AmountInWords.CurrencyGender.Masculine">
+            <summary>
+            Мужской.
+            </summary>
+        </member>
+        <member name="T:PZone.Formatting.AmountInWordsOptions">
+            <summary>
+            Параметры получения числа прописью.
+            </summary>
+        </member>
+        <member name="F:PZone.Formatting.AmountInWordsOptions.None">
+            <summary>
+            Не установлено ни каких параметров.
+            </summary>
+        </member>
+        <member name="F:PZone.Formatting.AmountInWordsOptions.WholeOnly">
+            <summary>
+            Обработать и вернуть только целую часть числа.
+            </summary>
+        </member>
+        <member name="F:PZone.Formatting.AmountInWordsOptions.FractionalOnly">
+            <summary>
+            Обработать и вернуть только дробную часть числа.
+            </summary>
+        </member>
+        <member name="F:PZone.Formatting.AmountInWordsOptions.NumericFractional">
+            <summary>
+            Дробная часть в виде числа.
+            </summary>
+        </member>
+        <member name="F:PZone.Formatting.AmountInWordsOptions.NumericWhole">
+            <summary>
+            Дробная часть в виде числа.
+            </summary>
+        </member>
+        <member name="T:PZone.Formatting.StringCropOptions">
+            <summary>
+            Параметры обрезания строки.
+            </summary>
+        </member>
+        <member name="F:PZone.Formatting.StringCropOptions.RemoveHtmlTags">
+            <summary>
+            Удалить все теги HTML из результирующей строки.
+            </summary>
+        </member>
+        <member name="F:PZone.Formatting.StringCropOptions.NewLineToSpace">
+            <summary>
+            Преобраховать перевод строки в пробел.
+            </summary>
+        </member>
+        <member name="F:PZone.Formatting.StringCropOptions.MergeSpaces">
+            <summary>
+            Объединение нескольких, подряд идущих, пробельных символа в один пробел.
+            </summary>
+        </member>
+        <member name="T:PZone.Formatting.StringFormatting">
+            <summary>
+            Форматирование строк.
+            </summary>
+        </member>
+        <member name="M:PZone.Formatting.StringFormatting.Crop(System.String,System.Int32,PZone.Formatting.StringCropOptions)">
+            <summary>
+            Обрезание строки до заданной длины.
+            </summary>
+            <param name="sourceString">Исходная строка.</param>
+            <param name="maxLength">Максимальная длина результирующей строки.</param>
+            <param name="options">Параметры обрезания.</param>
+            <returns>Метод возвращает строку, обрезанную до указанного размера (с учетом целостности слов).</returns>
+        </member>
+        <member name="T:PZone.Currencies">
+            <summary>
+            Список валют.
+            </summary>
+        </member>
+        <member name="F:PZone.Currencies.RUB">
+            <summary>
+            Российский рубль.
+            </summary>
+        </member>
+        <member name="F:PZone.Currencies.EUR">
+            <summary>
+            Евро.
+            </summary>
+        </member>
+        <member name="F:PZone.Currencies.USD">
+            <summary>
+            Доллар США.
+            </summary>
+        </member>
+        <member name="F:PZone.Currencies.UAH">
+            <summary>
+            Украинская гривна.
+            </summary>
+        </member>
+        <member name="F:PZone.Currencies.BYN">
+            <summary>
+            Белорусский рубль.
+            </summary>
+        </member>
+        <member name="F:PZone.Currencies.KZT">
+            <summary>
+            Тенге.
+            </summary>
+        </member>
+        <member name="T:PZone.Helpers.NumberSplitOptions">
+            <summary>
+            Параметры разделения числа.
+            </summary>
+        </member>
+        <member name="F:PZone.Helpers.NumberSplitOptions.RemoveWasteZeros">
+            <summary>
+            Удаление лишних нулей (ведущие у целой части и конечные у дробной).
+            </summary>
+        </member>
+        <member name="T:PZone.Helpers.NumberHelper">
+            <summary>
+            Инструменты для работы с числами.
+            </summary>
+        </member>
+        <member name="M:PZone.Helpers.NumberHelper.Split(System.String,System.String@,System.String@,System.Nullable{PZone.Helpers.NumberSplitOptions})">
+            <summary>
+            Разделение числа на целую и дробную часть.
+            </summary>
+            <param name="number">Исходной число.</param>
+            <param name="whole">Дробная часть числа.</param>
+            <param name="fractional">Целая часть числа.</param>
+            <param name="options">Паарметры разделения.</param>
+            <remarks>
+            В возвращаемых значенийх целой и дробной части убираются лишние нули (ведущие у целой части и конечные у дробной).
+            </remarks>
+        </member>
+        <member name="T:PZone.Helpers.UriHelper">
+            <summary>
+            Хелпер для работы с URI.
+            </summary>
+        </member>
+        <member name="M:PZone.Helpers.UriHelper.Combine(System.String[])">
+            <summary>
+            Формирование URI объединением нескольих строк.
+            </summary>
+            <param name="parts">Части URI.</param>
+            <returns>Возвращает строку URI, полученную путем объединения нескольких строк.</returns>
+            <remarks>
+            <example>
+            <code>
+            var actual = UriHelper.Combine("http://domain.com/", "/path/", "/path/", "/", "/file.htm");
+            // actual = "http://domain.com/path/path/file.htm"
+            </code>
+            </example>
+            </remarks>
+        </member>
+    </members>
+</doc>

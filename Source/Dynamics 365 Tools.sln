@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{5957BE99-2162-4812-B103-265E5DC209FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{FB4ED8D2-4CDF-49A3-97C7-FD814755C451}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "String", "String", "{6BBA6926-5043-410C-A5AA-B32F2DF45C6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "String", "Tools\String\String\String.csproj", "{0995110C-7438-421F-9577-998649CC771B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FetchXML", "FetchXML", "{F18270A6-F1C7-43AD-93BE-BC651F58252F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FetchXML", "Tools\FetchXML\FetchXML\FetchXML.csproj", "{528BBF4F-24BA-4D74-9546-93D88940C1AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common\Common.csproj", "{BA975349-739A-4B4F-8003-499E62DEA6BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common Workflow", "Common\Common Workflow\Common Workflow.csproj", "{284E4B2F-4072-4F7B-8D5F-C91F7108E839}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0995110C-7438-421F-9577-998649CC771B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0995110C-7438-421F-9577-998649CC771B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0995110C-7438-421F-9577-998649CC771B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0995110C-7438-421F-9577-998649CC771B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{528BBF4F-24BA-4D74-9546-93D88940C1AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{528BBF4F-24BA-4D74-9546-93D88940C1AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{528BBF4F-24BA-4D74-9546-93D88940C1AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{528BBF4F-24BA-4D74-9546-93D88940C1AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA975349-739A-4B4F-8003-499E62DEA6BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA975349-739A-4B4F-8003-499E62DEA6BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA975349-739A-4B4F-8003-499E62DEA6BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA975349-739A-4B4F-8003-499E62DEA6BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{284E4B2F-4072-4F7B-8D5F-C91F7108E839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{284E4B2F-4072-4F7B-8D5F-C91F7108E839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{284E4B2F-4072-4F7B-8D5F-C91F7108E839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{284E4B2F-4072-4F7B-8D5F-C91F7108E839}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6BBA6926-5043-410C-A5AA-B32F2DF45C6A} = {FB4ED8D2-4CDF-49A3-97C7-FD814755C451}
+		{0995110C-7438-421F-9577-998649CC771B} = {6BBA6926-5043-410C-A5AA-B32F2DF45C6A}
+		{F18270A6-F1C7-43AD-93BE-BC651F58252F} = {FB4ED8D2-4CDF-49A3-97C7-FD814755C451}
+		{528BBF4F-24BA-4D74-9546-93D88940C1AC} = {F18270A6-F1C7-43AD-93BE-BC651F58252F}
+		{BA975349-739A-4B4F-8003-499E62DEA6BC} = {5957BE99-2162-4812-B103-265E5DC209FB}
+		{284E4B2F-4072-4F7B-8D5F-C91F7108E839} = {5957BE99-2162-4812-B103-265E5DC209FB}
+	EndGlobalSection
+EndGlobal
