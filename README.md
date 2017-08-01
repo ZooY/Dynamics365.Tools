@@ -34,6 +34,20 @@
 
 ### Plug-ins
 
+<dl>
+<dt>Format</dt>
+<dd>Формирование значения строкового атрибута на основе строки формата. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#format">Настройка</a></dd>
+<dt>ToFirstTitleCase</dt>
+<dd>Перевод первой буквы строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#tofirsttitlecase">Настройка</a></dd>
+<dt>ToLowerCase</dt>
+<dd>Перевод всех букв строки в нижний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#tolowercase">Настройка</a></dd>
+<dt>ToTitleCase</dt>
+<dd>Перевод первых букв всех слов строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#totitlecase">Настройка</a></dd>
+<dt>ToUpperCase</dt>
+<dd>Перевод всех букв строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#touppercase">Настройка</a></dd>
+</dl>
+
+
 ### Workflow
 
 <dl>
@@ -53,16 +67,6 @@
 <dd>Перевод всех букв строки в верхний регистр.</dd>
 <dt>Trim</dt>
 <dd>Обрезание пробелов в начале и конце строки.</dd>
-<dt></dt>
-<dd></dd>
-<dt></dt>
-<dd></dd>
-<dt></dt>
-<dd></dd>
-<dt></dt>
-<dd></dd>
-<dt></dt>
-<dd></dd>
 </dl>
 
 ## User Tools
@@ -99,13 +103,12 @@
 Компоненты, позволяющие выполнять запросы к сервисам удаленных систем.
 
 ### Workflow
-<dl>
-<dt>POST JSON</dt>
-<dd>Выполнение POST-запроса к удаленному веб-сервису и отправка данных в формате JSON.</dd>
-<dt>PUT JSON</dt>
-<dd>Выполнение PUT-запроса к удаленному веб-сервису и отправка данных в формате JSON.</dd>
-</dl>
-
-<script>
-$('dl').hide();
-</script>
+<table>
+<tr>
+<td>POST JSON</td>
+<td>Выполнение POST-запроса к удаленному веб-сервису и отправка данных в формате JSON.</td>
+</tr>
+<td>PUT JSON</td>
+<td>Выполнение PUT-запроса к удаленному веб-сервису и отправка данных в формате JSON.</td>
+</tr>
+</table>
