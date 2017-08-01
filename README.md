@@ -11,22 +11,30 @@
 Набор компонентов, позволяющих оперировать данными, используя запросы FetchXML.
 
 ### Workflow
-<dl>
-<dt>Assign Team</dt>
-<dd>Назначение группы для всех записей, которые возвращает запрос FetchXML.</dd>
-<dt>Assign User</dt>
-<dd>Назначение пользователя для всех записей, которые возвращает запрос FetchXML.</dd>
-<dt>Average</dt>
-<dd>Вычисление среднего арифметического числовых значений, возвращаемых запросом FetchXML.</dd>
-<dt>Count</dt>
-<dd>Получение количества записей, возвращаемых запросом FetchXML.</dd>
-<dt>Median</dt>
-<dd>Вычисление медианы ряда числовых значений, возвращаемых запросом FetchXML.</dd>
-<dt>Sum</dt>
-<dd>Вычисление суммы ряда числовых значений, возвращаемых запросом FetchXML.</dd>
-<dt>Value</dt>
-<dd>Получение значения атрибута, возвращаемого запросом FetchXML.</dd>
-</dl>
+<table>
+<tr>
+<td>Assign Team</td>
+<td>Назначение группы для всех записей, которые возвращает запрос FetchXML.</td>
+</tr><tr>
+<td>Assign User</td>
+<td>Назначение пользователя для всех записей, которые возвращает запрос FetchXML.</td>
+</tr><tr>
+<td>Average</td>
+<td>Вычисление среднего арифметического числовых значений, возвращаемых запросом FetchXML.</td>
+</tr><tr>
+<td>Count</td>
+<td>Получение количества записей, возвращаемых запросом FetchXML.</td>
+</tr><tr>
+<td>Median</td>
+<td>Вычисление медианы ряда числовых значений, возвращаемых запросом FetchXML.</td>
+</tr><tr>
+<td>Sum</td>
+<td>Вычисление суммы ряда числовых значений, возвращаемых запросом FetchXML.</td>
+</tr><tr>
+<td>Value</td>
+<td>Получение значения атрибута, возвращаемого запросом FetchXML.</td>
+</tr>
+</table>
 
 ## String Tools
 
@@ -34,40 +42,55 @@
 
 ### Plug-ins
 
-<dl>
-<dt>Format</dt>
-<dd>Формирование значения строкового атрибута на основе строки формата. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#format">Настройка</a></dd>
-<dt>ToFirstTitleCase</dt>
-<dd>Перевод первой буквы строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#tofirsttitlecase">Настройка</a></dd>
-<dt>ToLowerCase</dt>
-<dd>Перевод всех букв строки в нижний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#tolowercase">Настройка</a></dd>
-<dt>ToTitleCase</dt>
-<dd>Перевод первых букв всех слов строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#totitlecase">Настройка</a></dd>
-<dt>ToUpperCase</dt>
-<dd>Перевод всех букв строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#touppercase">Настройка</a></dd>
-</dl>
+<table>
+<tr>
+<td>Format</td>
+<td>Формирование значения строкового атрибута на основе строки формата. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#format">Настройка</a></td>
+</tr><tr>
+<td>ToFirstTitleCase</td>
+<td>Перевод первой буквы строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#tofirsttitlecase">Настройка</a></td>
+</tr><tr>
+<td>ToLowerCase</td>
+<td>Перевод всех букв строки в нижний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#tolowercase">Настройка</a></td>
+</tr><tr>
+<td>ToTitleCase</td>
+<td>Перевод первых букв всех слов строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#totitlecase">Настройка</a></td>
+</tr><tr>
+<td>ToUpperCase</td>
+<td>Перевод всех букв строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#touppercase">Настройка</a></td>
+</tr>
+</table>
 
 
 ### Workflow
 
-<dl>
-<dt>Characters</dt>
-<dd>Специальные символы (пробел, перевод строки).</dd>
-<dt>Replace</dt>
-<dd>Замена подстроки в строке.</dd>
-<dt>Substring</dt>
-<dd>Получение подстроки.</dd>
-<dt>ToFirstTitleCase</dt>
-<dd>Перевод первой буквы строки в верхний регистр.</dd>
-<dt>ToLowerCase</dt>
-<dd>Перевод всех букв строки в нижний регистр.</dd>
-<dt>ToTitleCase</dt>
-<dd>Перевод первых букв всех слов строки в верхний регистр.</dd>
-<dt>ToUpperCase</dt>
-<dd>Перевод всех букв строки в верхний регистр.</dd>
-<dt>Trim</dt>
-<dd>Обрезание пробелов в начале и конце строки.</dd>
-</dl>
+<table>
+<tr>
+<td>Characters</td>
+<td>Специальные символы (пробел, перевод строки).</td>
+</tr><tr>
+<td>Replace</td>
+<td>Замена подстроки в строке.</td>
+</tr><tr>
+<td>Substring</td>
+<td>Получение подстроки.</td>
+</tr><tr>
+<td>ToFirstTitleCase</td>
+<td>Перевод первой буквы строки в верхний регистр.</td>
+</tr><tr>
+<td>ToLowerCase</td>
+<td>Перевод всех букв строки в нижний регистр.</td>
+</tr><tr>
+<td>ToTitleCase</td>
+<td>Перевод первых букв всех слов строки в верхний регистр.</td>
+</tr><tr>
+<td>ToUpperCase</td>
+<td>Перевод всех букв строки в верхний регистр.</td>
+</tr><tr>
+<td>Trim</td>
+<td>Обрезание пробелов в начале и конце строки.</td>
+</tr>
+</table>
 
 ## User Tools
 
@@ -75,28 +98,36 @@
 
 ### Workflow
 
-<dl>
-<dt>Current</dt>
-<dd>Получение текущих пользователей, кто инициировал запуск процесса и от чьего имени выполняется процесс.</dd>
-</dl>
+<table>
+<tr>
+<td>Current</td>
+<td>Получение текущих пользователей, кто инициировал запуск процесса и от чьего имени выполняется процесс.</td>
+</tr>
+</table>
 
 ## Variable Tools
 
 Набор компонентов, позволяющих использовать в рамках процесса переменные, а также создавать на их основе строки в формате JSON с многоуровневой вложенностью узлов.
 
 ### Workflow
-<dl>
-<dt>Get Value</dt>
-<dd>Получение значения переменной.</dd>
-<dt>Remove Dataset</dt>
-<dd>Удаление всех переменных, относящихся к указанному набору данных.</dd>
-<dt>Remove Value</dt>
-<dd>Удаление переменной.</dd>
-<dt>Set Value</dt>
-<dd>Установка значения переменной.</dd>
-<dt>To JSON</dt>
-<dd>Формирование, на основе всех переменных набора, строки в формате JSON.</dd>
-</dl>
+<table>
+<tr>
+<td>Get Value</td>
+<td>Получение значения переменной.</td>
+</tr><tr>
+<td>Remove Dataset</td>
+<td>Удаление всех переменных, относящихся к указанному набору данных.</td>
+</tr><tr>
+<td>Remove Value</td>
+<td>Удаление переменной.</td>
+</tr><tr>
+<td>Set Value</td>
+<td>Установка значения переменной.</td>
+</tr><tr>
+<td>To JSON</td>
+<td>Формирование, на основе всех переменных набора, строки в формате JSON.</td>
+</tr>
+</table>
 
 ## Web Tools
 
@@ -107,7 +138,7 @@
 <tr>
 <td>POST JSON</td>
 <td>Выполнение POST-запроса к удаленному веб-сервису и отправка данных в формате JSON.</td>
-</tr>
+</tr><tr>
 <td>PUT JSON</td>
 <td>Выполнение PUT-запроса к удаленному веб-сервису и отправка данных в формате JSON.</td>
 </tr>
