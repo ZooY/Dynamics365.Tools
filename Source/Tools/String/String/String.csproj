@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PZone.StringTools.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,27 +30,96 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>PZone.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Plugins\AttributesProcessing.cs" />
+    <Compile Include="Plugins\Format.cs" />
+    <Compile Include="Plugins\ToFirstTitleCase.cs" />
+    <Compile Include="Plugins\ToLowerCase.cs" />
+    <Compile Include="Plugins\ToTitleCase.cs" />
+    <Compile Include="Plugins\ToUpperCase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workflow\Characters.cs" />
+    <Compile Include="Workflow\Replace.cs" />
+    <Compile Include="Workflow\Substring.cs" />
+    <Compile Include="Workflow\ToFirstTitleCase.cs" />
+    <Compile Include="Workflow\ToLowerCase.cs" />
+    <Compile Include="Workflow\ToTitleCase.cs" />
+    <Compile Include="Workflow\ToUpperCase.cs" />
+    <Compile Include="Workflow\Trim.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Plugins\" />
-    <Folder Include="Workflow\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="PZone.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.CrmSdk.CoreAssemblies.8.2.0.2\lib\net452\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.IdentityModel.6.1.7600.16394\lib\net35\Microsoft.IdentityModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.CrmSdk.CoreAssemblies.8.2.0.2\lib\net452\Microsoft.Xrm.Sdk.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Workflow, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.CrmSdk.Workflow.8.2.0.2\lib\net452\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PZone.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e92de928f327206a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\PZone SDK Core\Source\PZone.Core\bin\Debug\PZone.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Common Plug-ins\Common Plug-ins.csproj">
+      <Project>{e159054d-dff5-4cae-8ea0-2b8f5e28ee60}</Project>
+      <Name>Common Plug-ins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Common Workflow\Common Workflow.csproj">
+      <Project>{284e4b2f-4072-4f7b-8d5f-c91f7108e839}</Project>
+      <Name>Common Workflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Common\Common.csproj">
+      <Project>{ba975349-739a-4b4f-8003-499e62dea6bc}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>md "$(TargetDir)Release"
+"$(SolutionDir)packages\ILMerge.2.14.1208\tools\ILMerge" /t:library /targetplatform:"v4,C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2" /copyattrs /keyfile:"$(ProjectDir)PZone.snk" /out:"$(TargetDir)Release\$(TargetFileName)" "$(TargetPath)" "$(TargetDir)PZone.Core.dll" "$(TargetDir)PZone.Common.dll"  "$(TargetDir)PZone.Common.Plugins.dll" "$(TargetDir)PZone.Common.Workflow.dll"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

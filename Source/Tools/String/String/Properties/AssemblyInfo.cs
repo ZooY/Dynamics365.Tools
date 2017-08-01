@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("String Tools")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Набор компонентов для обработки строк.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Programming Zone")]
 [assembly: AssemblyProduct("CRM Tools")]

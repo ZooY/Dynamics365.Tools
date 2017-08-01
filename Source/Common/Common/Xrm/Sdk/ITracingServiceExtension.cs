@@ -18,7 +18,7 @@ namespace PZone.Xrm.Sdk
         /// <param name="exception">Данные исключения.</param>
         public static void Trace(this ITracingService service, Exception exception)
         {
-            service.Trace($@"{exception.Message} (Code {exception.HResult})");
+            service.Trace($@"{ exception.GetType().FullName}: { exception.Message} (Code {exception.HResult})");
             service.Trace(exception.Source);
             service.Trace(exception.StackTrace);
         }
@@ -31,7 +31,7 @@ namespace PZone.Xrm.Sdk
         /// <param name="obj">Объект для записи в трассировку.</param>
         public static void Trace(this ITracingService service, object obj)
         {
-            service.Trace(JsonConvert.SerializeObject(obj, Formatting.Indented, new JsonSerializerSettings()
+            service.Trace(JsonConvert.SerializeObject(obj, Formatting.Indented, new JsonSerializerSettings
             {
                 ReferenceLoopHandling = ReferenceLoopHandling.Ignore
             }));

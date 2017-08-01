@@ -47,16 +47,16 @@ Plug-ins
 <td>Format</td>
 <td>Формирование значения строкового атрибута на основе строки формата. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#format">Настройка</a></td>
 </tr><tr>
-<td>ToFirstTitleCase</td>
+<td>To First Title Case</td>
 <td>Перевод первой буквы строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#tofirsttitlecase">Настройка</a></td>
 </tr><tr>
-<td>ToLowerCase</td>
+<td>To Lower Case</td>
 <td>Перевод всех букв строки в нижний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#tolowercase">Настройка</a></td>
 </tr><tr>
-<td>ToTitleCase</td>
+<td>To Title Case</td>
 <td>Перевод первых букв всех слов строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#totitlecase">Настройка</a></td>
 </tr><tr>
-<td>ToUpperCase</td>
+<td>To Upper Case</td>
 <td>Перевод всех букв строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#touppercase">Настройка</a></td>
 </tr>
 </table>
@@ -75,16 +75,16 @@ Workflow
 <td>Substring</td>
 <td>Получение подстроки.</td>
 </tr><tr>
-<td>ToFirstTitleCase</td>
+<td>To First Title Case</td>
 <td>Перевод первой буквы строки в верхний регистр.</td>
 </tr><tr>
-<td>ToLowerCase</td>
+<td>To Lower Case</td>
 <td>Перевод всех букв строки в нижний регистр.</td>
 </tr><tr>
-<td>ToTitleCase</td>
+<td>To Title Case</td>
 <td>Перевод первых букв всех слов строки в верхний регистр.</td>
 </tr><tr>
-<td>ToUpperCase</td>
+<td>To Upper Case</td>
 <td>Перевод всех букв строки в верхний регистр.</td>
 </tr><tr>
 <td>Trim</td>

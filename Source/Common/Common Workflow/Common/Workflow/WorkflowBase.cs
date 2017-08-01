@@ -62,14 +62,22 @@ namespace PZone.Common.Workflow
                     }
                     catch (Exception ex)
                     {
-                        throw new InvalidWorkflowExecutionException("System component setting error.\n Please contact support..", ex);
+                        throw new WorkflowConfigurationException("System component setting error.\n Please contact support.", ex);
                     }
                 }
                 Execute(context);
             }
+            catch (WorkflowConfigurationException ex)
+            {
+                TraceException(context, ex);
+                if (!HasError.Get(executionContext))
+                    SetError(context, ex.Message);
+                if (ThrowException.Get(context))
+                    throw;
+            }
             catch (InvalidWorkflowExecutionException ex)
             {
-                TraceException(context, ex.InnerException);
+                TraceException(context, ex);
                 if (!HasError.Get(executionContext))
                     SetError(context, ex.Message);
                 if (ThrowException.Get(context))
@@ -80,7 +88,6 @@ namespace PZone.Common.Workflow
                 TraceException(context, ex);
                 if (!HasError.Get(executionContext))
                     SetError(context, ex.Message);
-
                 if (ThrowException.Get(context))
                     throw new InvalidWorkflowExecutionException("An unexpected system error.\n Please contact support.", ex);
             }
@@ -110,15 +117,20 @@ namespace PZone.Common.Workflow
         /// Записывание данных исключения в сервис трассировки.
         /// </summary>
         /// <param name="context">Конекст выполнения.</param>
-        /// <param name="ex">Исключение.</param>
-        protected void TraceException(Context context, Exception ex)
+        /// <param name="exception">Исключение.</param>
+        protected virtual void TraceException(Context context, Exception exception)
         {
-            context.TracingService.Trace("=== Exception ===");
-            context.TracingService.Trace(ex);
             context.TracingService.Trace("=== Activity Context ===");
             context.TracingService.Trace(context.SourceActivityContext);
             context.TracingService.Trace("=== Context ===");
             context.TracingService.Trace(context.SourceContext);
+            context.TracingService.Trace("=== Exception ===");
+            var ex = exception;
+            while (ex != null)
+            {
+                context.TracingService.Trace(ex);
+                ex = ex.InnerException;
+            }
         }
 
 
@@ -128,7 +140,7 @@ namespace PZone.Common.Workflow
         /// <param name="context">Конекст выполнения.</param>
         /// <param name="message">Сообщение об ошибке.</param>
         /// <exception cref="Exception">Вызывается если параметр <see cref="ThrowException"/> установлен в <c>true</c>.</exception>
-        protected void SetError(Context context, string message)
+        protected virtual void SetError(Context context, string message)
         {
             HasError.Set(context, true);
             ErrorMessage.Set(context, message);
