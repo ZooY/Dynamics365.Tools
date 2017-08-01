@@ -1,5 +1,4 @@
-<img src="https://github.com/ZooY/Dynamics365.Tools/blob/develop/Docs/crm2016.png?raw=true" width="310" />
-<img src="https://github.com/ZooY/Dynamics365.Tools/blob/develop/Docs/dynamics365.png?raw=true" width="310"  align="right" />
+<img src="https://github.com/ZooY/Dynamics365.Tools/blob/develop/Docs/crm2016.png?raw=true" width="310" /><img src="https://github.com/ZooY/Dynamics365.Tools/blob/develop/Docs/dynamics365.png?raw=true" width="310"  align="right" />
 
 Пакет подключаемых модулей (Plug-in) и действий процессов (Workflow) для расширения стандартного функционала платформы Microsoft Dynamics CRM 2016 / Dynamics 365.
 
