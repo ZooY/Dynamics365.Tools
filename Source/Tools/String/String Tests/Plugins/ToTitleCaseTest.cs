@@ -47,7 +47,7 @@ namespace PZone.Tests.StringTools.Plugins
         {
             var entity = new Entity("contact", Guid.NewGuid())
             {
-                ["firstname"] = "РОМАН",
+                ["firstname"] = "рОМАН",
                 ["middlename"] = "анатольевич"
             };
             IPluginExecutionContext context = new FakePluginExecutionContext(entity);

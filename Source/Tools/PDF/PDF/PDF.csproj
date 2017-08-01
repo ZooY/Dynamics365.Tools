@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{528BBF4F-24BA-4D74-9546-93D88940C1AC}</ProjectGuid>
+    <ProjectGuid>{1FDF56DD-0FB9-47A2-8241-A1EEA2823861}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PZone.FetchXmlTools</RootNamespace>
-    <AssemblyName>PZone.FetchXmlTools</AssemblyName>
+    <RootNamespace>PZone.PdfTools</RootNamespace>
+    <AssemblyName>PZone.PdfTools</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -36,30 +36,10 @@
     <AssemblyOriginatorKeyFile>PZone.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Workflow\AssignOwner.cs" />
-    <Compile Include="Workflow\AssignTeam.cs" />
-    <Compile Include="Workflow\AssignUser.cs" />
-    <Compile Include="Workflow\Average.cs" />
-    <Compile Include="Workflow\Concat.cs" />
-    <Compile Include="Workflow\ExecuteWorkflowFromFetch.cs" />
-    <Compile Include="Workflow\Count.cs" />
-    <Compile Include="Workflow\Median.cs" />
-    <Compile Include="Workflow\Sum.cs" />
-    <Compile Include="Workflow\Value.cs" />
-    <Compile Include="Workflow\FetchXmlWorkflow.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Common\Common Workflow\Common Workflow.csproj">
-      <Project>{284e4b2f-4072-4f7b-8d5f-c91f7108e839}</Project>
-      <Name>Common Workflow</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Common\Common\Common.csproj">
-      <Project>{ba975349-739a-4b4f-8003-499e62dea6bc}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.11.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\iTextSharp.5.5.11\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.CrmSdk.CoreAssemblies.8.2.0.2\lib\net452\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
       <Private>True</Private>
@@ -74,6 +54,10 @@
     </Reference>
     <Reference Include="Microsoft.Xrm.Sdk.Workflow, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.CrmSdk.Workflow.8.2.0.2\lib\net452\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="PresentationFramework" />
@@ -91,17 +75,35 @@
     <Reference Include="System.Workflow.Activities" />
     <Reference Include="System.Workflow.ComponentModel" />
     <Reference Include="System.Workflow.Runtime" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcroFieldsExtension.cs" />
+    <Compile Include="PdfReaderExtension.cs" />
+    <Compile Include="Workflow\FillTemplate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="PZone.snk" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Common Workflow\Common Workflow.csproj">
+      <Project>{284e4b2f-4072-4f7b-8d5f-c91f7108e839}</Project>
+      <Name>Common Workflow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\Common\Common.csproj">
+      <Project>{ba975349-739a-4b4f-8003-499e62dea6bc}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>md "$(TargetDir)Release"
-"$(SolutionDir)packages\ILMerge.2.14.1208\tools\ILMerge" /t:library /targetplatform:"v4,C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2" /copyattrs /keyfile:"$(ProjectDir)PZone.snk" /out:"$(TargetDir)Release\$(TargetFileName)" "$(TargetPath)" "$(TargetDir)PZone.Core.dll" "$(TargetDir)PZone.Common.dll"  "$(TargetDir)PZone.Common.Workflow.dll"</PostBuildEvent>
+"$(SolutionDir)packages\ILMerge.2.14.1208\tools\ILMerge" /t:library /targetplatform:"v4,C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2" /copyattrs /keyfile:"$(ProjectDir)PZone.snk" /out:"$(TargetDir)Release\$(TargetFileName)" "$(TargetPath)" "$(TargetDir)PZone.Core.dll" "$(TargetDir)PZone.Common.dll"  "$(TargetDir)PZone.Common.Workflow.dll" "$(TargetDir)itextsharp.dll"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

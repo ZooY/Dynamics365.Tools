@@ -6,7 +6,7 @@ using PZone.Common.Plugins;
 namespace PZone.StringTools.Plugins
 {
     /// <summary>
-    /// Перевод первых букв всех слов строки в верхний регистр.
+    /// Перевод первых букв всех слов строки в верхний регистр, а остальных в нижний.
     /// </summary>
     /// <remarks>
     /// <para>
@@ -44,7 +44,7 @@ namespace PZone.StringTools.Plugins
         /// <inheritdoc />
         public override void Execute(Context context)
         {
-            SetValues(context, value => CultureInfo.CurrentCulture.TextInfo.ToTitleCase(value));
+            SetValues(context, value => CultureInfo.CurrentCulture.TextInfo.ToTitleCase(value.ToLower()));
         }
     }
 }
