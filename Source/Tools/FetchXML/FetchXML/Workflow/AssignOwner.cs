@@ -3,10 +3,8 @@ using System.Activities;
 using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Workflow;
-using PZone.Activities;
-using PZone.Common.Workflow;
-using PZone.Xrm.Sdk;
-
+using PZone.Xrm.Workflow;
+using PZone.Xrm;
 
 namespace PZone.FetchXmlTools.Workflow
 {

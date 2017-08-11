@@ -5,8 +5,7 @@ using System.IO;
 using iTextSharp.text.pdf;
 using Microsoft.Xrm.Sdk.Workflow;
 using Newtonsoft.Json;
-using PZone.Common.Workflow;
-using PZone.Activities;
+using PZone.Xrm.Workflow;
 
 
 namespace PZone.PdfTools.Workflow

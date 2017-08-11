@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Activities;
 using Microsoft.Xrm.Sdk.Workflow;
-using PZone.Common.Workflow;
-using PZone.Activities;
-using PZone.Xrm.Sdk;
+using PZone.Xrm;
+using PZone.Xrm.Workflow;
+
 
 namespace PZone.FetchXmlTools.Workflow
 {

@@ -39,6 +39,7 @@
       <HintPath>..\..\..\packages\Microsoft.CrmSdk.CoreAssemblies.8.2.0.2\lib\net452\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.IdentityModel, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Microsoft.IdentityModel.6.1.7600.16394\lib\net35\Microsoft.IdentityModel.dll</HintPath>
       <Private>True</Private>
@@ -51,7 +52,31 @@
       <HintPath>..\..\..\packages\Microsoft.CrmSdk.Workflow.8.2.0.2\lib\net452\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="PresentationFramework" />
+    <Reference Include="PZone.Core, Version=1.0.6.0, Culture=neutral, PublicKeyToken=e92de928f327206a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PZone.SDK.Core.1.0.6\lib\net40\PZone.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PZone.SDK.Xrm, Version=8.0.3.0, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PZone.SDK.XRM.8.0.3.0\lib\net452\PZone.SDK.Xrm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PZone.SDK.Xrm.Plugins, Version=8.0.1.0, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PZone.SDK.XRM.Plugins.8.0.1.0\lib\net452\PZone.SDK.Xrm.Plugins.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PZone.SDK.Xrm.Testing, Version=8.0.0.1, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PZone.SDK.XRM.Testing.8.0.0.1\lib\net452\PZone.SDK.Xrm.Testing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PZone.SDK.Xrm.Workflow, Version=8.0.0.0, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PZone.SDK.XRM.Workflow.8.0.0.0\lib\net452\PZone.SDK.Xrm.Workflow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Activities" />
     <Reference Include="System.Activities.Presentation" />
@@ -90,28 +115,13 @@
     <Compile Include="Workflow\Class1.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Common\Common Plug-ins\Common Plug-ins.csproj">
-      <Project>{e159054d-dff5-4cae-8ea0-2b8f5e28ee60}</Project>
-      <Name>Common Plug-ins</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Common\Common Testing\Common Testing.csproj">
-      <Project>{b650882c-4a5b-4eca-a3a2-a86f86f878c5}</Project>
-      <Name>Common Testing</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Common\Common Workflow Testing\Common Workflow Testing.csproj">
-      <Project>{3de0a92f-e73f-4dda-a9e7-ae65dbe14f41}</Project>
-      <Name>Common Workflow Testing</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Common\Common Workflow\Common Workflow.csproj">
-      <Project>{284e4b2f-4072-4f7b-8d5f-c91f7108e839}</Project>
-      <Name>Common Workflow</Name>
-    </ProjectReference>
     <ProjectReference Include="..\String\String.csproj">
       <Project>{0995110c-7438-421f-9577-998649cc771b}</Project>
       <Name>String</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>

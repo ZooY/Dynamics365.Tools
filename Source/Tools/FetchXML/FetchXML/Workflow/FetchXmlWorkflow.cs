@@ -1,6 +1,6 @@
 ﻿using System.Activities;
 using Microsoft.Xrm.Sdk.Workflow;
-using PZone.Common.Workflow;
+using PZone.Xrm.Workflow;
 
 
 namespace PZone.FetchXmlTools.Workflow

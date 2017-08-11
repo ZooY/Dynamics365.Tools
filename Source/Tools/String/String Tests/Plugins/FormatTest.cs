@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Xrm.Sdk;
-using PZone.Common.Testing;
 using PZone.StringTools.Plugins;
-using PZone.Xrm.Sdk;
+using PZone.Xrm.Plugins;
+using PZone.Xrm.Testing;
 
 
 namespace PZone.Tests.StringTools.Plugins

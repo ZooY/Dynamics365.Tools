@@ -2,9 +2,8 @@
 using System.Activities;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Workflow;
-using PZone.Activities;
-using PZone.Common.Workflow;
-using PZone.Xrm.Sdk;
+using PZone.Xrm;
+using PZone.Xrm.Workflow;
 
 
 namespace PZone.FetchXmlTools.Workflow
@@ -46,6 +45,7 @@ namespace PZone.FetchXmlTools.Workflow
         /// </summary>
         [Output("Result as Money")]
         public OutArgument<Money> ResultAsMoney { get; set; }
+
 
         /// <inheritdoc />
         protected override void Execute(Context context)

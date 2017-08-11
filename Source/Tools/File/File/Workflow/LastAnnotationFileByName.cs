@@ -2,8 +2,7 @@
 using System.Linq;
 using Microsoft.Xrm.Sdk.Query;
 using Microsoft.Xrm.Sdk.Workflow;
-using PZone.Activities;
-using PZone.Common.Workflow;
+using PZone.Xrm.Workflow;
 
 
 namespace PZone.FileTools.Workflow

@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xrm.Sdk.Workflow;
 using Newtonsoft.Json;
-using PZone.Activities;
-using PZone.Common.Workflow;
+using PZone.Xrm.Workflow;
 
 
 namespace PZone.VariableTools.Workflow

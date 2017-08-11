@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using Microsoft.Xrm.Sdk;
 using Newtonsoft.Json;
-using PZone.Common.Plugins;
-using PZone.Common.Plugins.Exceptions;
+using PZone.Xrm.Plugins;
+using PZone.Xrm.Plugins.Exceptions;
 
 
 namespace PZone.StringTools.Plugins

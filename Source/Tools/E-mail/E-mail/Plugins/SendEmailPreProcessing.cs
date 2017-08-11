@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.Xrm.Sdk;
 using Newtonsoft.Json;
-using PZone.Common.Plugins;
+using PZone.Xrm.Plugins;
 
 
 namespace PZone.EmailTools.Plugins

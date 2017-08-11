@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Workflow;
-using PZone.Activities;
-using PZone.Common.Workflow;
-using PZone.Xrm.Sdk;
+using PZone.Xrm;
+using PZone.Xrm.Workflow;
+
 
 namespace PZone.FetchXmlTools.Workflow
 {

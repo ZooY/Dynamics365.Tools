@@ -1,8 +1,7 @@
 ﻿using System.Activities;
 using System.Globalization;
 using Microsoft.Xrm.Sdk.Workflow;
-using PZone.Activities;
-using PZone.Common.Workflow;
+using PZone.Xrm.Workflow;
 
 
 namespace PZone.StringTools.Workflow

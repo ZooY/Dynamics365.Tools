@@ -1,4 +1,4 @@
-﻿using PZone.Common.Workflow;
+﻿using PZone.Xrm.Workflow;
 
 
 namespace PZone.VariableTools.Workflow

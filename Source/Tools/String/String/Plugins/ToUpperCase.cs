@@ -1,5 +1,5 @@
 ﻿using Microsoft.Xrm.Sdk;
-using PZone.Common.Plugins;
+using PZone.Xrm.Plugins;
 
 
 namespace PZone.StringTools.Plugins

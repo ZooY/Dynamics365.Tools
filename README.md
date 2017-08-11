@@ -2,19 +2,17 @@
 
 Пакет подключаемых модулей (Plug-in) и действий процессов (Workflow) для расширения стандартного функционала платформы Microsoft Dynamics CRM 2016 / Dynamics 365.
 
-# Скачать
+# Download
 
-Скачать текущую версию пакета компонентов в виде управляемых и неуправляемых решений для CRM, а также в виде архивов с исходным кодом.
-
-<a href="https://github.com/ZooY/Dynamics365.Tools/releases/tag/v1.0">Version 1.0</a>
+<a href="https://github.com/ZooY/Dynamics365.Tools/releases">Скачать</a> текущую версию пакета компонентов в виде управляемых и неуправляемых решений для CRM, а также в виде архивов с исходным кодом.
 
 # Нашли ошибку?
 
-Компонент работает некорректно - напишите об этом в разделе <a href="https://github.com/ZooY/Dynamics365.Tools/issues">Issues</a>.
+Компонент работает некорректно - <a href="https://github.com/ZooY/Dynamics365.Tools/issues">напишите об этом</a>.
 
 # Есть предложение?
 
-Есть идеи новых компонентов или улучшения существующих - напишите об этом в разделе <a href="https://github.com/ZooY/Dynamics365.Tools/issues">Issues</a>.
+Есть идеи новых компонентов или улучшения существующих - <a href="https://github.com/ZooY/Dynamics365.Tools/issues">напишите об этом</a>.
 
 # Состав пакета
 
@@ -87,7 +85,6 @@ Workflow
 </tr>
 </table>
 
-
 ## E-mail Tools
 
 Набор компонентов для работы с сообщениями электронной почты.
@@ -134,8 +131,68 @@ Workflow
 <td>Удаление текущей записи.</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>GUID to Account</td>
+<td>Действие возвращает сущность "Организация" (account) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Activity</td>
+<td>Действие возвращает сущность "Звонок" (phonecall) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Business Unit</td>
+<td>Действие возвращает сущность "Подразделение" (businessunit) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Contact</td>
+<td>Действие возвращает сущность "Персона" (contact) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Currency</td>
+<td>Действие возвращает сущность "Валюта" (transactioncurrency) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Invoice</td>
+<td> Действие возвращает сущности "Счет" (invoice) и "Продукт счета" (invoicedetail) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Lead</td>
+<td>Действие возвращает сущность "Интерес" (lead) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Marketing List</td>
+<td>Действие возвращает сущность "Маркетинговый список" (list) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Opportunity</td>
+<td>Действие возвращает сущности "Возможная сделка" (opportunity) и "Продукт возможой сделки" (opportunityproduct) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Order</td>
+<td>Действие возвращает сущности "Заказ" (salesorder) и "Продукт заказа" (salesorderdetail) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Product</td>
+<td>Действие возвращает сущности "Продукт" (product), "Прайс-лист" (pricelevel), "Продукт прайс-листа" (productpricelevel) и "Единица изменения" (uom) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Queue</td>
+<td>Действие возвращает сущности "Очередь" (queue) и "Элемент очереди" (queueitem) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Quote</td>
+<td>Действие возвращает сущности "Предложение" (quote) и "Продукт предложения" (quotedetail) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Team</td>
+<td>Действие возвращает сущность "Группа пользователей" (team) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to User</td>
+<td>Действие возвращает сущность "Пользователь" (systemuser) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Workflow</td>
+<td>Действие возвращает сущность "Бизнес-процесс" (workflow) для указанного GUID.</td>
 </tr>
 </table>
 
@@ -203,23 +260,6 @@ Workflow
 <tr>
 <td>Get Value</td>
 <td>Получение значения из строки формата JSON.</td>
-</tr>
-</table>
-
-## Lookup Tools
-
-Набор компонентов для работы с данными в полях типа Поиск (Lookup).
-
-Workflow
-
-<table>
-<tr>
-<td>Guid to Lookup</td>
-<td>Дейсвтие возвращает Lookup для указанного GUID. Возвращаемые типы сущностей: Account (account), Contact (contact), Business Unit (businessunit), Currency (transactioncurrency), Invoice (invoice), Invoice Product (invoicedetail), Lead (lead), Marketing List (list), Opportunity (opportunity), Opportunity Product (opportunityproduct), Order (salesorder), Order Product (salesorderdetail), Price List (pricelevel), Price List Item (productpricelevel), Workflow (workflow), Product (product), Queue (queue), Queue Item (queueitem), Quote (quote), Quote Product (quotedetail), User (systemuser), Unit (uom), Team (team), Phone Call (phonecall)</td>
-</tr>
-<tr>
-<td>Normalization</td>
-<td>Нормализация ссылки на сущность. Заключается в преобразовании ссылки с нулевым идентификатором в <code>null</code>.</td>
 </tr>
 </table>
 

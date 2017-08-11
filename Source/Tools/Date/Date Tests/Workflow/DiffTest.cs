@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Workflow;
-using PZone.Common.Testing;
-using PZone.Common.Workflow.Testing;
 using PZone.DateTools.Workflow;
+using PZone.Xrm.Testing;
+using PZone.Xrm.Testing.Workflow;
 
 
 namespace PZone.Tests.DateTools.Workflow
@@ -49,7 +49,7 @@ namespace PZone.Tests.DateTools.Workflow
         {
             var action = new Diff();
             _invoker = new WorkflowInvoker(action);
-            _invoker.Extensions.Add<ITracingService>(() => new FakseTracingService());
+            _invoker.Extensions.Add<ITracingService>(() => new FakeTracingService());
             _invoker.Extensions.Add<IWorkflowContext>(() => new FakeWorkflowContext());
             _invoker.Extensions.Add<IOrganizationServiceFactory>(() => new FakeOrganizationServiceFactory());
         }

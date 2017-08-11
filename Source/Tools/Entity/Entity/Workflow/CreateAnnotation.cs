@@ -2,8 +2,8 @@
 using System.Activities;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Workflow;
-using PZone.Activities;
-using PZone.Common.Workflow;
+using PZone.Xrm;
+using PZone.Xrm.Workflow;
 
 
 namespace PZone.EntityTools.Workflow
@@ -68,7 +68,7 @@ namespace PZone.EntityTools.Workflow
         protected override void Execute(Context context)
         {
             var entityId = new Guid(EntityIdString.Get(context));
-            context.Service.Create(new Entity("annotation")
+            context.Service.Create(new Entity(Metadata.Annotation.LogicalName)
             {
                 ["objectid"] = new EntityReference(EntityLogicalName.Get(context), entityId),
                 ["subject"] = Subject.Get(context),

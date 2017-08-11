@@ -49,6 +49,7 @@
     <Compile Include="Workflow\VariableBase.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="PZone.snk" />
   </ItemGroup>
@@ -79,6 +80,14 @@
       <HintPath>..\..\..\packages\PZone.SDK.Core.1.0.6\lib\net40\PZone.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PZone.SDK.Xrm, Version=8.0.3.0, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PZone.SDK.XRM.8.0.3.0\lib\net452\PZone.SDK.Xrm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PZone.SDK.Xrm.Workflow, Version=8.0.0.0, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PZone.SDK.XRM.Workflow.8.0.0.0\lib\net452\PZone.SDK.Xrm.Workflow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Activities" />
     <Reference Include="System.Activities.Presentation" />
@@ -96,16 +105,10 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Common\Common Workflow\Common Workflow.csproj">
-      <Project>{284E4B2F-4072-4F7B-8D5F-C91F7108E839}</Project>
-      <Name>Common Workflow</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>md "$(TargetDir)Release"
-"$(SolutionDir)packages\ILMerge.2.14.1208\tools\ILMerge" /t:library /targetplatform:"v4,C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2" /copyattrs /keyfile:"$(ProjectDir)PZone.snk" /out:"$(TargetDir)Release\$(TargetFileName)" "$(TargetPath)" "$(TargetDir)Newtonsoft.Json.dll" "$(TargetDir)PZone.Core.dll" "$(TargetDir)PZone.Common.dll"  "$(TargetDir)PZone.Common.Workflow.dll"</PostBuildEvent>
+"$(SolutionDir)packages\ILMerge.2.14.1208\tools\ILMerge" /closed /t:library /targetplatform:"v4,C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2" /xmldocs /copyattrs /internalize /keyfile:"$(ProjectDir)PZone.snk" /out:"$(TargetDir)Release\$(TargetFileName)" "$(TargetPath)" "$(TargetDir)Newtonsoft.Json.dll" "$(TargetDir)PZone.Core.dll" "$(TargetDir)PZone.SDK.Xrm.dll" "$(TargetDir)PZone.SDK.Xrm.Workflow.dll"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

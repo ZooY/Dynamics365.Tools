@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Activities;
 using Microsoft.Xrm.Sdk.Workflow;
-using PZone.Common.Workflow;
-using PZone.Activities;
+using PZone.Xrm.Workflow;
+
 
 namespace PZone.EntityTools.Workflow
 {

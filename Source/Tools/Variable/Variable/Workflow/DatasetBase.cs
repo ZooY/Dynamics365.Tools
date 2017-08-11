@@ -1,9 +1,8 @@
 ﻿using System.Activities;
 using System.Text.RegularExpressions;
 using Microsoft.Xrm.Sdk.Workflow;
-using PZone.Common.Workflow;
-using PZone.Common.Workflow.Exceptions;
-using PZone.Activities;
+using PZone.Xrm.Workflow;
+using PZone.Xrm.Workflow.Exceptions;
 
 
 namespace PZone.VariableTools.Workflow

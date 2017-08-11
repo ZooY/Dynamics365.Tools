@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Workflow;
-using PZone.Common.Testing;
-using PZone.Common.Workflow.Testing;
 using PZone.StringTools.Workflow;
+using PZone.Xrm.Testing;
+using PZone.Xrm.Testing.Workflow;
 
 
 namespace PZone.Tests.StringTools.Workflow
@@ -25,7 +25,7 @@ namespace PZone.Tests.StringTools.Workflow
             var context = new FakeWorkflowContext();
 
             var invoker = new WorkflowInvoker(action);
-            invoker.Extensions.Add<ITracingService>(() => new FakseTracingService());
+            invoker.Extensions.Add<ITracingService>(() => new FakeTracingService());
             invoker.Extensions.Add<IWorkflowContext>(() => context);
             invoker.Extensions.Add<IOrganizationServiceFactory>(() => factory);
 
@@ -50,7 +50,7 @@ namespace PZone.Tests.StringTools.Workflow
             var context = new FakeWorkflowContext();
 
             var invoker = new WorkflowInvoker(action);
-            invoker.Extensions.Add<ITracingService>(() => new FakseTracingService());
+            invoker.Extensions.Add<ITracingService>(() => new FakeTracingService());
             invoker.Extensions.Add<IWorkflowContext>(() => context);
             invoker.Extensions.Add<IOrganizationServiceFactory>(() => factory);
 
@@ -74,7 +74,7 @@ namespace PZone.Tests.StringTools.Workflow
             var context = new FakeWorkflowContext();
 
             var invoker = new WorkflowInvoker(action);
-            invoker.Extensions.Add<ITracingService>(() => new FakseTracingService());
+            invoker.Extensions.Add<ITracingService>(() => new FakeTracingService());
             invoker.Extensions.Add<IWorkflowContext>(() => context);
             invoker.Extensions.Add<IOrganizationServiceFactory>(() => factory);
 
@@ -98,7 +98,7 @@ namespace PZone.Tests.StringTools.Workflow
             var context = new FakeWorkflowContext();
 
             var invoker = new WorkflowInvoker(action);
-            invoker.Extensions.Add<ITracingService>(() => new FakseTracingService());
+            invoker.Extensions.Add<ITracingService>(() => new FakeTracingService());
             invoker.Extensions.Add<IWorkflowContext>(() => context);
             invoker.Extensions.Add<IOrganizationServiceFactory>(() => factory);
 

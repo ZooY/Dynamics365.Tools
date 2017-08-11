@@ -2,8 +2,9 @@
 using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Workflow;
-using PZone.Common.Workflow;
-using PZone.Activities;
+
+using PZone.Xrm.Workflow;
+
 
 namespace PZone.EmailTools.Workflow
 {

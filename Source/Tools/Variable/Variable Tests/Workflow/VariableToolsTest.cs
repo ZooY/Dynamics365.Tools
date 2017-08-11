@@ -4,9 +4,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Workflow;
 using Newtonsoft.Json;
-using PZone.Common.Testing;
-using PZone.Common.Workflow.Testing;
 using PZone.VariableTools.Workflow;
+using PZone.Xrm.Testing;
+using PZone.Xrm.Testing.Workflow;
 
 
 namespace PZone.Tests.VariableTools.Workflow
@@ -23,7 +23,7 @@ namespace PZone.Tests.VariableTools.Workflow
 
             var setValueAction = new SetValue();
             var invoker = new WorkflowInvoker(setValueAction);
-            invoker.Extensions.Add<ITracingService>(() => new FakseTracingService());
+            invoker.Extensions.Add<ITracingService>(() => new FakeTracingService());
             invoker.Extensions.Add<IWorkflowContext>(() => context);
             invoker.Extensions.Add<IOrganizationServiceFactory>(() => new FakeOrganizationServiceFactory(service));
             invoker.Invoke(new Dictionary<string, object>
@@ -47,7 +47,7 @@ namespace PZone.Tests.VariableTools.Workflow
 
             var toJsonAction = new ToJson();
             invoker = new WorkflowInvoker(toJsonAction);
-            invoker.Extensions.Add<ITracingService>(() => new FakseTracingService());
+            invoker.Extensions.Add<ITracingService>(() => new FakeTracingService());
             invoker.Extensions.Add<IWorkflowContext>(() => context);
             invoker.Extensions.Add<IOrganizationServiceFactory>(() => new FakeOrganizationServiceFactory(service));
             var result = invoker.Invoke(new Dictionary<string, object>

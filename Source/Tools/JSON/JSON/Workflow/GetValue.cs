@@ -6,9 +6,8 @@ using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Workflow;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using PZone.Activities;
-using PZone.Common.Workflow;
-using PZone.Common.Workflow.Exceptions;
+using PZone.Xrm.Workflow;
+using PZone.Xrm.Workflow.Exceptions;
 
 
 namespace PZone.JsonTools.Workflow
