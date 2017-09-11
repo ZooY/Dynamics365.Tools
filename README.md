@@ -284,7 +284,7 @@ Workflow
 
 <table>
 <tr>
-<td>Send <sup style="color:red; font-weight: bold;">NEW!</sup></td>
+<td>:new: Send</td>
 <td>Отправка сообщения в RabbitMQ.</td>
 </tr>
 </table>
