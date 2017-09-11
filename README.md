@@ -276,6 +276,19 @@ Workflow
 </tr>
 </table>
 
+## RabbitMQ Tools
+
+Набор компонентов для работы с RabbitMQ.
+
+Workflow
+
+<table>
+<tr>
+<td>Send <sup style="color:red; font-weight: bold;">NEW!</sup></td>
+<td>Отправка сообщения в RabbitMQ.</td>
+</tr>
+</table>
+
 ## FetchXML Tools
 
 Набор компонентов, позволяющих оперировать данными, используя запросы FetchXML.
