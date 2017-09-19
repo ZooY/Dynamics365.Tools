@@ -46,6 +46,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Workflow\Characters.cs" />
     <Compile Include="Workflow\Replace.cs" />
+    <Compile Include="Workflow\Strings.cs" />
     <Compile Include="Workflow\Substring.cs" />
     <Compile Include="Workflow\ToFirstTitleCase.cs" />
     <Compile Include="Workflow\ToLowerCase.cs" />

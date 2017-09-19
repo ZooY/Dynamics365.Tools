@@ -85,6 +85,19 @@ Workflow
 </tr>
 </table>
 
+## Debug Tools
+
+Набор компонентов для отладки Workflow.
+
+Workflow
+
+<table>
+<tr>
+<td>:new: Throw Excaption</td>
+<td>Вызов исключения.</td>
+</tr>
+</table>
+
 ## E-mail Tools
 
 Набор компонентов для работы с сообщениями электронной почты.
@@ -354,6 +367,9 @@ Workflow
 </tr><tr>
 <td>Replace</td>
 <td>Замена подстроки в строке.</td>
+</tr><tr>
+<td>:new: Strings</td>
+<td>Специальные строки (GUID).</td>
 </tr><tr>
 <td>Substring</td>
 <td>Получение подстроки.</td>

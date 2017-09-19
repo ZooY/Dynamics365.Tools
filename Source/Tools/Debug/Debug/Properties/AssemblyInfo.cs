@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("String Tools")]
-[assembly: AssemblyDescription("Набор компонентов для обработки строк.")]
+[assembly: AssemblyTitle("Debug Tools")]
+[assembly: AssemblyDescription("Набор компонентов для отладки Workflow.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Programming Zone")]
 [assembly: AssemblyProduct("CRM Tools")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("0995110c-7438-421f-9577-998649cc771b")]
+[assembly: Guid("9e7e8f39-1fe1-4f15-852c-4b344aafe5c5")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("8.0.1.0")]
-[assembly: AssemblyFileVersion("8.0.1.0")]
+[assembly: AssemblyVersion("8.0.0.0")]
+[assembly: AssemblyFileVersion("8.0.0.0")]

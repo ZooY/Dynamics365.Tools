@@ -50,6 +50,9 @@ namespace PZone.RabbitMqTools.Workflow
         [Input("Message")]
         public InArgument<string> Message { get; set; }
 
+        [Input("Correlation ID")]
+        public InArgument<string> CorrelationId { get; set; }
+
 
         protected override void Execute(Context context)
         {
@@ -77,7 +80,9 @@ namespace PZone.RabbitMqTools.Workflow
                 var properties = new BasicProperties { DeliveryMode = 2 };
                 if (!string.IsNullOrWhiteSpace(mqHeaderName))
                     properties.Headers = new Dictionary<string, object> { { mqHeaderName, mqHeaderValue } };
-
+                var correlationId = CorrelationId.Get(context);
+                if (!string.IsNullOrWhiteSpace(correlationId))
+                    properties.CorrelationId = correlationId;
                 channel.BasicPublish(
                     exchange: mqExchangeName,
                     routingKey: mqRoutingKey,
