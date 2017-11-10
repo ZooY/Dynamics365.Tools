@@ -24,64 +24,60 @@ Workflow
 
 <table>
 <tr>
-<td>Add Days</td>
-<td>Добавлеине к дате указаное количество дней.</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#add-days">Add Days</a></td>
+<td>Добавление к дате указанное количество дней.</td>
 </tr>
 <tr>
-<td>Add Hours</td>
-<td>Добавлеине к дате указаное количество чвсов.</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#add-hours">Add Hours</a></td>
+<td>Добавление к дате указанное количество часов.</td>
 </tr>
 <tr>
-<td>Add Milliseconds</td>
-<td>Добавлеине к дате указаное количество миллисекунд.</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#add-milliseconds">Add Milliseconds</a></td>
+<td>Добавление к дате указанное количество миллисекунд.</td>
 </tr>
 <tr>
-<td>Add Minutes</td>
-<td>Добавлеине к дате указаное количество минут.</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#add-minutes">Add Minutes</a></td>
+<td>Добавление к дате указанное количество минут. </td>
 </tr>
 <tr>
-<td>Add Months</td>
-<td>Добавлеине к дате указаное количество месяцев.</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#add-months">Add Months</a></td>
+<td>Добавление к дате указанное количество месяцев.</td>
 </tr>
 <tr>
-<td>Add Seconds</td>
-<td>Добавлеине к дате указаное количество секунд.</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#add-seconds">Add Seconds</a></td>
+<td>Добавление к дате указанное количество секунд.</td>
 </tr>
 <tr>
-<td>Add Years</td>
-<td>Добавлеине к дате указаное количество лет.</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#add-years">Add Years</a></td>
+<td>Добавление к дате указанное количество лет.</td>
 </tr>
 <tr>
-<td>Age</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#age">Age</a></td>
 <td>Расчет возраста (количества полных лет).</td>
 </tr>
 <tr>
-<td>Create</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#create">Create</a></td>
 <td>Создание даты из составных частей.</td>
 </tr>
 <tr>
-<td>Diff</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#diff">Diff</a></td>
 <td>Разница между двумя датами.</td>
 </tr>
 <tr>
-<td>Format</td>
-<td>Форматирвоание даты и представление ее в виде строки.</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#format">Format</a></td>
+<td>Форматирование даты и представление ее в виде строки.</td>
 </tr>
 <tr>
-<td>Now</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#now">Now</a></td>
 <td>Текущая дата.</td>
 </tr>
 <tr>
-<td>Parse</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#parse">Parse</a></td>
 <td>Преобразование строки в дату.</td>
 </tr>
 <tr>
-<td>Parts</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Date-Tools#parts">Parts</a></td>
 <td>Получение отдельных составных частей даты.</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
 </tr>
 </table>
 
@@ -93,8 +89,12 @@ Workflow
 
 <table>
 <tr>
-<td>:new: Throw Excaption</td>
+<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Debug-Tools#throw-excaption">Throw Excaption</a></td>
 <td>Вызов исключения.</td>
+</tr>
+<tr>
+<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Debug-Tools#get-shared-variable">Get Shared Variable</a></td>
+<td>Получение значения общей переменной.</td>
 </tr>
 </table>
 
@@ -106,8 +106,8 @@ Plug-ins
 
 <table>
 <tr>
-<td>Send E-mail Pre-Processing</td>
-<td>Предварительная обработка события отправки электронного письма с помощью действий. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Email-Tools#send-e-mail-pre-processing">Подробнее</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Email-Tools#send-e-mail-pre-processing">Send E-mail Pre-Processing</a></td>
+<td>Предварительная обработка события отправки электронного письма с помощью действий.</td>
 </tr>
 </table>
 
@@ -225,24 +225,24 @@ Workflow
 <td>Назначение пользователя для всех записей, которые возвращает запрос FetchXML.</td>
 </tr>
 <tr>
-<td>Average</td>
-<td>Вычисление среднего арифметического числовых значений, возвращаемых запросом FetchXML. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#average">Подробнее</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#average">Average</a></td>
+<td>Вычисление среднего арифметического числовых значений, возвращаемых запросом FetchXML.</td>
 </tr>
 <tr>
 <td>Count</td>
 <td>Получение количества записей, возвращаемых запросом FetchXML.</td>
 </tr>
 <tr>
-<td>Median</td>
-<td>Вычисление медианы ряда числовых значений, возвращаемых запросом FetchXML. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#median">Подробнее</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#median">Median</a></td>
+<td>Вычисление медианы ряда числовых значений, возвращаемых запросом FetchXML.</td>
 </tr>
 <tr>
-<td>Sum</td>
-<td>Вычисление суммы ряда числовых значений, возвращаемых запросом FetchXML. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#sum">Подробнее</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#sum">Sum</a></td>
+<td>Вычисление суммы ряда числовых значений, возвращаемых запросом FetchXML.</td>
 </tr>
 <tr>
-<td>Value</td>
-<td>Получение значения атрибута, возвращаемого запросом FetchXML. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#value">Подробнее</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#value">Value</a></td>
+<td>Получение значения атрибута, возвращаемого запросом FetchXML.</td>
 </tr>
 </table>
 
@@ -341,20 +341,20 @@ Plug-ins
 
 <table>
 <tr>
-<td>Format</td>
-<td>Формирование значения строкового атрибута на основе строки формата. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#format">Подробнее</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#format">Format</a></td>
+<td>Формирование значения строкового атрибута на основе строки формата.</td>
 </tr><tr>
-<td>To First Title Case</td>
-<td>Перевод первой буквы строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#tofirsttitlecase">Подробнее</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#tofirsttitlecase">To First Title Case</a></td>
+<td>Перевод первой буквы строки в верхний регистр.</td>
 </tr><tr>
-<td>To Lower Case</td>
-<td>Перевод всех букв строки в нижний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#tolowercase">Подробнее</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#tolowercase">To Lower Case</a></td>
+<td>Перевод всех букв строки в нижний регистр.</td>
 </tr><tr>
-<td>To Title Case</td>
-<td>Перевод первых букв всех слов строки в верхний регистр, а остальных в нижний. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#totitlecase">Подробнее</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#totitlecase">To Title Case</a></td>
+<td>Перевод первых букв всех слов строки в верхний регистр, а остальных в нижний.</td>
 </tr><tr>
-<td>To Upper Case</td>
-<td>Перевод всех букв строки в верхний регистр. <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#touppercase">Подробнее</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#touppercase">To Upper Case</a></td>
+<td>Перевод всех букв строки в верхний регистр.</td>
 </tr>
 </table>
 

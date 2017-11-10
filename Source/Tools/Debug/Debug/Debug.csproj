@@ -28,6 +28,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PZone.DebugTools.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -86,7 +87,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Workflow\ThrowExcaption.cs" />
+    <Compile Include="Workflow\GetSharedVariable.cs" />
+    <Compile Include="Workflow\ThrowException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +96,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>md "$(TargetDir)Release"
+"$(SolutionDir)packages\ILMerge.2.14.1208\tools\ILMerge" /closed /t:library /targetplatform:"v4,C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2" /xmldocs /copyattrs /internalize /keyfile:"$(ProjectDir)PZone.snk" /out:"$(TargetDir)Release\$(TargetFileName)" "$(TargetPath)" "$(TargetDir)Newtonsoft.Json.dll" "$(TargetDir)PZone.Core.dll" "$(TargetDir)PZone.SDK.Xrm.dll" "$(TargetDir)PZone.SDK.Xrm.Plugins.dll" "$(TargetDir)PZone.SDK.Xrm.Workflow.dll"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

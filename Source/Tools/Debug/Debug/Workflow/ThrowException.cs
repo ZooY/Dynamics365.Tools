@@ -9,10 +9,10 @@ namespace PZone.DebugTools.Workflow
     /// <summary>
     /// Вызов исключения.
     /// </summary>
-    public class ThrowExcaption : WorkflowBase
+    public class ThrowException : WorkflowBase
     {
         /// <summary>
-        /// Текст сообщения об ошибке.
+        /// Текст сообщения.
         /// </summary>
         [Input("Message")]
         public InArgument<string> Message { get; set; }
