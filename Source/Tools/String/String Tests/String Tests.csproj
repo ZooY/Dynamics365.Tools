@@ -112,7 +112,9 @@
     <Compile Include="Plugins\ToFirstTitleCaseTest.cs" />
     <Compile Include="Plugins\FormatTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Workflow\Class1.cs" />
+    <Compile Include="Workflow\JaroDistance.cs" />
+    <Compile Include="Workflow\JaroWinklerDistance.cs" />
+    <Compile Include="Workflow\Substring.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\String\String.csproj">

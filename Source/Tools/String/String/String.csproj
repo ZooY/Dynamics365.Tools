@@ -45,6 +45,9 @@
     <Compile Include="Plugins\ToUpperCase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Workflow\Characters.cs" />
+    <Compile Include="Workflow\ComparisonsBase.cs" />
+    <Compile Include="Workflow\JaroDistance.cs" />
+    <Compile Include="Workflow\JaroWinklerDistance.cs" />
     <Compile Include="Workflow\Replace.cs" />
     <Compile Include="Workflow\Strings.cs" />
     <Compile Include="Workflow\Substring.cs" />
@@ -85,6 +88,10 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="PZone.Core, Version=1.0.6.0, Culture=neutral, PublicKeyToken=e92de928f327206a, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\PZone.SDK.Core.1.0.6\lib\net40\PZone.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PZone.Data, Version=1.0.1.0, Culture=neutral, PublicKeyToken=25f6abf841b35169, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PZone.SDK.Data.1.0.1.0\lib\net40\PZone.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="PZone.SDK.Xrm, Version=8.0.3.0, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">

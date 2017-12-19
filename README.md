@@ -362,31 +362,37 @@ Workflow
 
 <table>
 <tr>
-<td>Characters</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#characters">Characters</a></td>
 <td>Специальные символы (пробел, перевод строки).</td>
 </tr><tr>
-<td>Replace</td>
+<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#jaro-distance">Jaro Distance</a></td>
+<td>Сходство Джаро между двумя строками.</td>
+</tr><tr>
+<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#jaro-winkler-distance">Jaro-Winkler Distance</a></td>
+<td>Сходство Джаро—Винклера между двумя строками.</td>
+</tr><tr>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#replace">Replace</a></td>
 <td>Замена подстроки в строке.</td>
 </tr><tr>
-<td>:new: Strings</td>
+<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#strings">Strings</a></td>
 <td>Специальные строки (GUID).</td>
 </tr><tr>
-<td>Substring</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#substring">Substring</a></td>
 <td>Получение подстроки.</td>
 </tr><tr>
-<td>To First Title Case</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#to-first-title-case">To First Title Case</a></td>
 <td>Перевод первой буквы строки в верхний регистр.</td>
 </tr><tr>
-<td>To Lower Case</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#to-lower-case">To Lower Case</a></td>
 <td>Перевод всех букв строки в нижний регистр.</td>
 </tr><tr>
-<td>To Title Case</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#to-title-case">To Title Case</a></td>
 <td>Перевод первых букв всех слов строки в верхний регистр.</td>
 </tr><tr>
-<td>To Upper Case</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#to-upper-case">To Upper Case</a></td>
 <td>Перевод всех букв строки в верхний регистр.</td>
 </tr><tr>
-<td>Trim</td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#trim">Trim</a></td>
 <td>Обрезание пробелов в начале и конце строки.</td>
 </tr>
 </table>
