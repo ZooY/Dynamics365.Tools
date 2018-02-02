@@ -2,7 +2,9 @@
  * For Microsoft Dynamics 365 v.1612 (8.2.2.112)
  */
 typeof (PZone) === 'undefined' && (PZone = {});
-PZone.tabs = function () {
+typeof (PZone.UI) === 'undefined' && (PZone.UI = {});
+typeof (PZone.UI.Forms) === 'undefined' && (PZone.UI.Forms = {});
+PZone.UI.Forms.tabs = function () {
     var $ = jQuery;
     typeof ($) === 'undefined' && !!parent && ($ = parent.jQuery);
     if (typeof ($) === 'undefined') {
