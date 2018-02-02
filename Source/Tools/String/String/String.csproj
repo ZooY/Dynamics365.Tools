@@ -90,8 +90,8 @@
       <HintPath>..\..\..\packages\PZone.SDK.Core.1.0.6\lib\net40\PZone.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="PZone.Data, Version=1.0.1.0, Culture=neutral, PublicKeyToken=25f6abf841b35169, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\PZone.SDK.Data.1.0.1.0\lib\net40\PZone.Data.dll</HintPath>
+    <Reference Include="PZone.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=25f6abf841b35169, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PZone.SDK.Data.1.0.2.0\lib\net40\PZone.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="PZone.SDK.Xrm, Version=8.0.3.0, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
@@ -126,7 +126,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>md "$(TargetDir)Release"
-"$(SolutionDir)packages\ILMerge.2.14.1208\tools\ILMerge" /closed /t:library /targetplatform:"v4,C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2" /xmldocs /copyattrs /internalize /keyfile:"$(ProjectDir)PZone.snk" /out:"$(TargetDir)Release\$(TargetFileName)" "$(TargetPath)" "$(TargetDir)Newtonsoft.Json.dll" "$(TargetDir)PZone.Core.dll" "$(TargetDir)PZone.SDK.Xrm.dll" "$(TargetDir)PZone.SDK.Xrm.Plugins.dll" "$(TargetDir)PZone.SDK.Xrm.Workflow.dll"</PostBuildEvent>
+"$(SolutionDir)packages\ILMerge.2.14.1208\tools\ILMerge" /closed /t:library /targetplatform:"v4,C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2" /xmldocs /copyattrs /internalize /keyfile:"$(ProjectDir)PZone.snk" /out:"$(TargetDir)Release\$(TargetFileName)" "$(TargetPath)" "$(TargetDir)Newtonsoft.Json.dll" "$(TargetDir)PZone.Core.dll" "$(TargetDir)PZone.Data.dll" "$(TargetDir)PZone.SDK.Xrm.dll" "$(TargetDir)PZone.SDK.Xrm.Plugins.dll" "$(TargetDir)PZone.SDK.Xrm.Workflow.dll"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

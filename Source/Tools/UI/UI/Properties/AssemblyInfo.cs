@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("String Tools")]
-[assembly: AssemblyDescription("Набор компонентов для обработки строк.")]
+[assembly: AssemblyTitle("UI Tools")]
+[assembly: AssemblyDescription("Компоненты пользовательского интерфейса.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Programming Zone")]
 [assembly: AssemblyProduct("CRM Tools")]
-[assembly: AssemblyCopyright("Copyright © 2017 Programming Zone")]
+[assembly: AssemblyCopyright("Copyright © 2018 Programming Zone")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("0995110c-7438-421f-9577-998649cc771b")]
+[assembly: Guid("a4988bba-8e86-4ac4-bce1-25377fa24e44")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,8 +29,7 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Build and Revision Numbers 
+// You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("8.0.2.0")]
-[assembly: AssemblyFileVersion("8.0.2.0")]
+[assembly: AssemblyVersion("8.0.0.0")]
+[assembly: AssemblyFileVersion("8.0.0.0")]

@@ -397,6 +397,19 @@ Workflow
 </tr>
 </table>
 
+## UI
+
+Компоненты пользовательского интерфейса.
+
+Web
+
+<table>
+<tr>
+<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/UI-Tools#tabs">Tabs</a></td>
+<td>Формирование на форме вкладок вместо раскрывающихся разделов.</td>
+</tr>
+</table>
+
 ## User Tools
 
 Набор компонентов для работы с пользователями системы.

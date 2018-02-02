@@ -1,4 +1,5 @@
 ﻿using System;
+using PZone.Data.Comparisons;
 using PZone.Xrm.Workflow;
 
 
@@ -17,9 +18,12 @@ namespace PZone.StringTools.Workflow
         /// <inheritdoc />
         protected override void Execute(Context context)
         {
-            var string1 = String1.Get(context) ?? "";
-            var string2 = String2.Get(context) ?? "";
-            var result = Data.Comparisons.StringComparisons.JaroWinklerDistance(string1, string2);
+            var settings = new StringComparisonSettings
+            {
+                CaseSensitive = CaseSensitive.Get(context),
+                AccentSensitive = AccentSensitive.Get(context)
+            };
+            var result = StringComparisons.JaroWinklerDistance(String1.Get(context), String2.Get(context), settings);
             Result.Set(context, (int)Math.Round(result * 100));
         }
     }

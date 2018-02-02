@@ -139,9 +139,9 @@ namespace PZone.StringTools.Plugins
                     foreach (var argument in attribute.Value.Args)
                     {
                         if (context.Entity.Contains(argument))
-                            args.Add(context.Entity[argument].ToString());
+                            args.Add(context.Entity[argument]?.ToString() ?? string.Empty);
                         else if (context.Message == Message.Update && context.PreImage.Contains(argument))
-                            args.Add(context.PreImage[argument].ToString());
+                            args.Add(context.PreImage[argument]?.ToString() ?? string.Empty);
                         else
                             args.Add(string.Empty);
                     }

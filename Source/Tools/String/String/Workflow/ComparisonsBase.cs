@@ -27,6 +27,21 @@ namespace PZone.StringTools.Workflow
 
 
         /// <summary>
+        /// Флаг учета регистра символов при сравнении.
+        /// </summary>
+        [RequiredArgument]
+        [Input("Учитывать регистр символов")]
+        [Default("false")]
+        public InArgument<bool> CaseSensitive { get; set; }
+        /// <summary>
+        /// Флаг учета диакритических знаков при сравнении.
+        /// </summary>
+        [RequiredArgument]
+        [Input("Учитывать диакритические символы")]
+        [Default("false")]
+        public InArgument<bool> AccentSensitive { get; set; }
+
+        /// <summary>
         /// Результат.
         /// </summary>
         [Output("Результат")]
