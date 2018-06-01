@@ -60,6 +60,17 @@ namespace PZone.DateTools.Workflow
 
 
         /// <summary>
+        /// Значение года в виде строки.
+        /// </summary>
+        /// <remarks>
+        /// При использовании в качестве строки целочисленного значения из свойства <see cref="Year"/>, оно возвращается в форматированном виде с пробелом в качестве разделителя разрядов. 
+        /// Поэтому для получения года в "нормальном" виде необходимо использовать его строковое представление.
+        /// </remarks>
+        [Output("Year as String")]
+        public OutArgument<string> YearAsString { get; set; }
+
+
+        /// <summary>
         /// Значение часа.
         /// </summary>
         [Output("Hour")]
@@ -100,6 +111,7 @@ namespace PZone.DateTools.Workflow
             Day.Set(context, dateTime.Day);
             Month.Set(context, dateTime.Month);
             Year.Set(context, dateTime.Year);
+            YearAsString.Set(context, dateTime.Year.ToString());
             Hour.Set(context, dateTime.Hour);
             Minute.Set(context, dateTime.Minute);
             Second.Set(context, dateTime.Second);
