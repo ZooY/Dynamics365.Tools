@@ -1,6 +1,6 @@
 ﻿/*!
- * @version 1.0.0
- * @name Form Icons Library
+ * @version 8.0.1.0
+ * @name Form Header Icons Library
  * @description Library for creating icons in the form header.
  */
 

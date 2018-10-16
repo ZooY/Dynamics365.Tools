@@ -14,6 +14,7 @@ namespace PZone.Tests.RabbitMqTools.Workflow
     public class SendTest
     {
         [TestMethod]
+        [Ignore]
         public void RealSend()
         {
             var service = new FakeOrganizationService();

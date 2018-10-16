@@ -31,13 +31,13 @@ namespace PZone.Tests.StringTools.Workflow
         [TestMethod]
         public void Success()
         {
-            var result = _invoker.Invoke(new Dictionary<string, object> { ["String1"] = "MARTHA", ["String2"] = "MARHTA" });
+            var result = _invoker.Invoke(new Dictionary<string, object> { ["String1"] = "MARTHA", ["String2"] = "MARHTA", ["CaseSensitive"] = true, ["AccentSensitive"] = false });
             Assert.AreEqual(94, result["Result"]);
 
-            result = _invoker.Invoke(new Dictionary<string, object> { ["String1"] = "DIXON", ["String2"] = "DICKSONX" });
+            result = _invoker.Invoke(new Dictionary<string, object> { ["String1"] = "DIXON", ["String2"] = "DICKSONX", ["CaseSensitive"] = true, ["AccentSensitive"] = false });
             Assert.AreEqual(77, result["Result"]);
 
-            result = _invoker.Invoke(new Dictionary<string, object> { ["String1"] = "CRATE", ["String2"] = "TRACE" });
+            result = _invoker.Invoke(new Dictionary<string, object> { ["String1"] = "CRATE", ["String2"] = "TRACE", ["CaseSensitive"] = true, ["AccentSensitive"] = false });
             Assert.AreEqual(73, result["Result"]);
         }
     }

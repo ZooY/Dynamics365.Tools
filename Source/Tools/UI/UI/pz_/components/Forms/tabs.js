@@ -1,5 +1,6 @@
-﻿/*
- * For Microsoft Dynamics 365 v.1612 (8.2.2.112)
+﻿/*!
+ * @version 8.0.1.0
+ * @name Form Tabs Library
  */
 
 
