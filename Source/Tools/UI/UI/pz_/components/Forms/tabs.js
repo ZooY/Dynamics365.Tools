@@ -1,9 +1,13 @@
 ﻿/*
  * For Microsoft Dynamics 365 v.1612 (8.2.2.112)
  */
+
+
 typeof (PZone) === 'undefined' && (PZone = {});
 typeof (PZone.UI) === 'undefined' && (PZone.UI = {});
 typeof (PZone.UI.Forms) === 'undefined' && (PZone.UI.Forms = {});
+
+
 PZone.UI.Forms.tabs = function () {
     var $ = jQuery;
     typeof ($) === 'undefined' && !!parent && ($ = parent.jQuery);
@@ -17,7 +21,7 @@ PZone.UI.Forms.tabs = function () {
     $('head').append([
         '<style>',
         '#PZoneTabs { border-bottom: 1px solid #a5acb5; border-left: 1px solid #DDDDDD; }',
-        '#PZoneTabs li { display: inline-block; background-color: #F4F4F4; padding: 5px 10px; border-width: 1px 1px 0 0; border-style: solid; border-color: #DDDDDD; text-transform: uppercase; cursor: pointer; }',
+        '#PZoneTabs li { position: relative; display: inline-block; background-color: #F4F4F4; padding: 5px 10px; border-width: 1px 1px 0 0; border-style: solid; border-color: #DDDDDD; text-transform: uppercase; cursor: pointer; }',
         '#PZoneTabs li.selected { background-color: white; }',
         '#PZoneTabs li:hover { background-color: #D7EBF9; }',
         '#crmNotifications { margin-bottom: 20px; }',
@@ -27,19 +31,22 @@ PZone.UI.Forms.tabs = function () {
     $tabs = $('#PZoneTabs');
     $tabs.on('click', 'li', function () {
         var $oldTab = $('#PZoneTabs li.selected'),
-			oldTabName = $oldTab.attr('data-name'),
-			$tab = $(this),
-			tabName = $tab.attr('data-name');
+            oldTabName = $oldTab.attr('data-name'),
+            $tab = $(this),
+            tabName = $tab.attr('data-name');
         $oldTab.removeClass('selected');
-        oldTabName != null && oldTabName !== '' && Xrm.Page.ui.tabs.get(oldTabName).setVisible(false);
+        oldTabName != null && oldTabName != '' && Xrm.Page.ui.tabs.get(oldTabName).setVisible(false);
         $tab.addClass('selected');
         Xrm.Page.ui.tabs.get(tabName).setVisible(true);
+        window.setTimeout(function () {
+            parent.dispatchEvent(new Event('resize'));
+        }, 50);
     });
     Xrm.Page.ui.tabs.forEach(function (tab, index) {
         if (tab.getVisible() === false) return;
         var tabId = 'tab' + index,
-			tabName = tab.getName(),
-			tabLabel = tab.getLabel();
+            tabName = tab.getName(),
+            tabLabel = tab.getLabel();
         $tabs.append('<li data-name=' + tabName + '>' + tabLabel + '</li>');
         tab.setDisplayState('expanded');
         $('#' + tabId + ' > div.ms-crm-InlineTabHeader').hide();

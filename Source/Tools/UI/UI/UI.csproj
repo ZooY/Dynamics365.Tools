@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,6 +52,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="pz_\components\Forms\icons.js" />
     <Content Include="pz_\components\Forms\tabs.js" />
     <Content Include="Web.config" />
   </ItemGroup>

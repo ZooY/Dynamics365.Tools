@@ -9,7 +9,7 @@ using PZone.Xrm.Workflow.Exceptions;
 namespace PZone.EntityTools.Workflow
 {
     /// <summary>
-    /// Дейсвтие возвращает сущность для указанного GUID.
+    /// Действие возвращает сущность для указанного GUID.
     /// </summary>
     public abstract class GuidToEntity : WorkflowBase
     {

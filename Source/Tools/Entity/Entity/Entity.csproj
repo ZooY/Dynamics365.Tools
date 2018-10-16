@@ -90,6 +90,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Workflow\EntityToGuid.cs" />
     <Compile Include="Workflow\GuidToAccount.cs" />
     <Compile Include="Workflow\GuidToActivity.cs" />
     <Compile Include="Workflow\GuidToBusinessUnit.cs" />
@@ -113,9 +114,12 @@
     <Compile Include="Workflow\CurrentEntityId.cs" />
     <Compile Include="Workflow\CreateAnnotation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workflow\AccountToGuid.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="PZone.snk" />
   </ItemGroup>
