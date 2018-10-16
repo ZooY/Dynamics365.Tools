@@ -89,12 +89,12 @@ Workflow
 
 <table>
 <tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Debug-Tools#throw-excaption">Throw Excaption</a></td>
-<td>Вызов исключения.</td>
-</tr>
-<tr>
 <td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Debug-Tools#get-shared-variable">Get Shared Variable</a></td>
 <td>Получение значения общей переменной.</td>
+</tr>
+<tr>
+<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Debug-Tools#throw-excaption">Throw Excaption</a></td>
+<td>Вызов исключения.</td>
 </tr>
 </table>
 
@@ -127,6 +127,10 @@ Workflow
 Workflow
 
 <table>
+<tr>
+<td>Account to GUID</td>
+<td>Getting the GUID of the Account entity.</td>
+</tr>
 <tr>
 <td>Create Annotation</td>
 <td>Создание примечания для произвольной сущности.</td>
@@ -302,37 +306,6 @@ Workflow
 </tr>
 </table>
 
-## FetchXML Tools
-
-Набор компонентов, позволяющих оперировать данными, используя запросы FetchXML.
-
-Workflow
-
-<table>
-<tr>
-<td>Assign Team</td>
-<td>Назначение группы для всех записей, которые возвращает запрос FetchXML.</td>
-</tr><tr>
-<td>Assign User</td>
-<td>Назначение пользователя для всех записей, которые возвращает запрос FetchXML.</td>
-</tr><tr>
-<td>Average</td>
-<td>Вычисление среднего арифметического числовых значений, возвращаемых запросом FetchXML.</td>
-</tr><tr>
-<td>Count</td>
-<td>Получение количества записей, возвращаемых запросом FetchXML.</td>
-</tr><tr>
-<td>Median</td>
-<td>Вычисление медианы ряда числовых значений, возвращаемых запросом FetchXML.</td>
-</tr><tr>
-<td>Sum</td>
-<td>Вычисление суммы ряда числовых значений, возвращаемых запросом FetchXML.</td>
-</tr><tr>
-<td>Value</td>
-<td>Получение значения атрибута, возвращаемого запросом FetchXML.</td>
-</tr>
-</table>
-
 ## String Tools
 
 Набор компонентов для обработки строк.
@@ -404,6 +377,10 @@ Workflow
 Web
 
 <table>
+<tr>
+<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/UI-Tools#icons">Icons</a></td>
+<td>Library for creating icons in the form header.</td>
+</tr>
 <tr>
 <td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/UI-Tools#tabs">Tabs</a></td>
 <td>Формирование на форме вкладок вместо раскрывающихся разделов.</td>
