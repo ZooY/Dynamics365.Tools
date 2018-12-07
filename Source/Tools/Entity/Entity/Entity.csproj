@@ -90,6 +90,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Workflow\CreateAnnotation.cs" />
     <Compile Include="Workflow\EntityToGuid.cs" />
     <Compile Include="Workflow\GuidToAccount.cs" />
     <Compile Include="Workflow\GuidToActivity.cs" />
@@ -108,11 +109,12 @@
     <Compile Include="Workflow\GuidToTeam.cs" />
     <Compile Include="Workflow\GuidToUser.cs" />
     <Compile Include="Workflow\GuidToWorkflow.cs" />
+    <Compile Include="Workflow\ParseEntityDynamicUrl.cs" />
     <Compile Include="Workflow\SwitchProcess.cs" />
     <Compile Include="Workflow\Delete.cs" />
     <Compile Include="Workflow\DeleteCurrent.cs" />
     <Compile Include="Workflow\CurrentEntityId.cs" />
-    <Compile Include="Workflow\CreateAnnotation.cs" />
+    <Compile Include="Workflow\CreateAnnotationWithTextFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Workflow\AccountToGuid.cs" />
   </ItemGroup>

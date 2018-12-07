@@ -89,11 +89,11 @@ Workflow
 
 <table>
 <tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Debug-Tools#throw-excaption">Throw Excaption</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Debug-Tools#throw-excaption">Throw Excaption</a></td>
 <td>Вызов исключения.</td>
 </tr>
 <tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Debug-Tools#get-shared-variable">Get Shared Variable</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Debug-Tools#get-shared-variable">Get Shared Variable</a></td>
 <td>Получение значения общей переменной.</td>
 </tr>
 </table>
@@ -207,6 +207,10 @@ Workflow
 <td>GUID to Workflow</td>
 <td>Действие возвращает сущность "Бизнес-процесс" (workflow) для указанного GUID.</td>
 </tr>
+<tr>
+<td>:new: Parse Entity Dynamic URL</td>
+<td>Parsing the dynamic URL and getting the parameters of the entity.</td>
+</tr>
 </table>
 
 ## FetchXML Tools
@@ -297,7 +301,7 @@ Workflow
 
 <table>
 <tr>
-<td>:new: Send</td>
+<td>Send</td>
 <td>Отправка сообщения в RabbitMQ.</td>
 </tr>
 </table>
@@ -365,16 +369,16 @@ Workflow
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#characters">Characters</a></td>
 <td>Специальные символы (пробел, перевод строки).</td>
 </tr><tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#jaro-distance">Jaro Distance</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#jaro-distance">Jaro Distance</a></td>
 <td>Сходство Джаро между двумя строками.</td>
 </tr><tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#jaro-winkler-distance">Jaro-Winkler Distance</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#jaro-winkler-distance">Jaro-Winkler Distance</a></td>
 <td>Сходство Джаро—Винклера между двумя строками.</td>
 </tr><tr>
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#replace">Replace</a></td>
 <td>Замена подстроки в строке.</td>
 </tr><tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#strings">Strings</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#strings">Strings</a></td>
 <td>Специальные строки (GUID).</td>
 </tr><tr>
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#substring">Substring</a></td>
@@ -405,7 +409,7 @@ Web
 
 <table>
 <tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/UI-Tools#tabs">Tabs</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/UI-Tools#tabs">Tabs</a></td>
 <td>Формирование на форме вкладок вместо раскрывающихся разделов.</td>
 </tr>
 </table>
