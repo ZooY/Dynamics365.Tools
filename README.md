@@ -83,7 +83,16 @@ Workflow
 
 ## Debug Tools
 
-Набор компонентов для отладки Workflow.
+Набор компонентов для отладки.
+
+Plug-ins
+
+<table>
+<tr>
+<td>:new: Trace</a></td>
+<td>Write message info into entity.</td>
+</tr>
+</table>
 
 Workflow
 
@@ -129,7 +138,11 @@ Workflow
 <table>
 <tr>
 <td>Create Annotation</td>
-<td>Создание примечания для произвольной сущности.</td>
+<td>Create annotation for any entity.</td>
+</tr>
+<tr>
+<td>:new: Create Annotation with Text File</td>
+<td>Create annotation with text file attachment for any entity.</td>
 </tr>
 <tr>
 <td>Current Entity ID</td>
@@ -293,6 +306,19 @@ Workflow
 </tr>
 </table>
 
+## Process Tools
+
+A components for working with processes.
+
+Plug-ins
+
+<table>
+<tr>
+<td>:new: Execute Workflow</td>
+<td>Execute workflow.</td>
+</tr>
+</table>
+
 ## RabbitMQ Tools
 
 Набор компонентов для работы с RabbitMQ.
@@ -369,6 +395,9 @@ Workflow
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#characters">Characters</a></td>
 <td>Специальные символы (пробел, перевод строки).</td>
 </tr><tr>
+<td>:new: From BASE64</td>
+<td>Декодирование строки из BASE64.</td>
+</tr><tr>
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#jaro-distance">Jaro Distance</a></td>
 <td>Сходство Джаро между двумя строками.</td>
 </tr><tr>
@@ -383,6 +412,9 @@ Workflow
 </tr><tr>
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#substring">Substring</a></td>
 <td>Получение подстроки.</td>
+</tr><tr>
+<td>:new: To BASE64</td>
+<td>Кодирование строки в BASE64.</td>
 </tr><tr>
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#to-first-title-case">To First Title Case</a></td>
 <td>Перевод первой буквы строки в верхний регистр.</td>
