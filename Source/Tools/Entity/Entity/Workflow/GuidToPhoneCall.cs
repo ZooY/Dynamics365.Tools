@@ -10,7 +10,7 @@ namespace PZone.EntityTools.Workflow
     /// <summary>
     /// Действие возвращает сущность "Звонок" (phonecall) для указанного GUID.
     /// </summary>
-    public class GuidToActivity : GuidToEntity
+    public class GuidToPhoneCall : GuidToEntity
     {
         /// <summary>
         /// Звонок.

@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Programming Zone")]
 [assembly: AssemblyProduct("CRM Tools")]
-[assembly: AssemblyCopyright("Copyright © 2017-2018 Programming Zone")]
+[assembly: AssemblyCopyright("Copyright © 2017-2019 Programming Zone")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
