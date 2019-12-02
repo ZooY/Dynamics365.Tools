@@ -83,17 +83,26 @@ Workflow
 
 ## Debug Tools
 
-Набор компонентов для отладки Workflow.
+Набор компонентов для отладки.
+
+Plug-ins
+
+<table>
+<tr>
+<td>Trace</a></td>
+<td>Write message info into entity.</td>
+</tr>
+</table>
 
 Workflow
 
 <table>
 <tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Debug-Tools#get-shared-variable">Get Shared Variable</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Debug-Tools#get-shared-variable">Get Shared Variable</a></td>
 <td>Получение значения общей переменной.</td>
 </tr>
 <tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Debug-Tools#throw-excaption">Throw Excaption</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/Debug-Tools#throw-excaption">Throw Excaption</a></td>
 <td>Вызов исключения.</td>
 </tr>
 </table>
@@ -133,7 +142,11 @@ Workflow
 </tr>
 <tr>
 <td>Create Annotation</td>
-<td>Создание примечания для произвольной сущности.</td>
+<td>Create annotation for any entity.</td>
+</tr>
+<tr>
+<td>:new: Create Annotation with Text File</td>
+<td>Create annotation with text file attachment for any entity.</td>
 </tr>
 <tr>
 <td>Current Entity ID</td>
@@ -152,10 +165,6 @@ Workflow
 <td>Действие возвращает сущность "Организация" (account) для указанного GUID.</td>
 </tr>
 <tr>
-<td>GUID to Activity</td>
-<td>Действие возвращает сущность "Звонок" (phonecall) для указанного GUID.</td>
-</tr>
-<tr>
 <td>GUID to Business Unit</td>
 <td>Действие возвращает сущность "Подразделение" (businessunit) для указанного GUID.</td>
 </tr>
@@ -168,12 +177,24 @@ Workflow
 <td>Действие возвращает сущность "Валюта" (transactioncurrency) для указанного GUID.</td>
 </tr>
 <tr>
+<td>GUID to E-mail</td>
+<td>:new: Действие возвращает сущность "E-mail" (email) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Fax</td>
+<td>:new: Действие возвращает сущность "Факс" (fax) для указанного GUID.</td>
+</tr>
+<tr>
 <td>GUID to Invoice</td>
 <td> Действие возвращает сущности "Счет" (invoice) и "Продукт счета" (invoicedetail) для указанного GUID.</td>
 </tr>
 <tr>
 <td>GUID to Lead</td>
 <td>Действие возвращает сущность "Интерес" (lead) для указанного GUID.</td>
+</tr>
+<tr>
+<td>GUID to Letter</td>
+<td>:new: Действие возвращает сущность "Письмо" (letter) для указанного GUID.</td>
 </tr>
 <tr>
 <td>GUID to Marketing List</td>
@@ -200,6 +221,10 @@ Workflow
 <td>Действие возвращает сущности "Предложение" (quote) и "Продукт предложения" (quotedetail) для указанного GUID.</td>
 </tr>
 <tr>
+<td>GUID to Task</td>
+<td>:new: Действие возвращает сущность "Задача" (task) для указанного GUID.</td>
+</tr>
+<tr>
 <td>GUID to Team</td>
 <td>Действие возвращает сущность "Группа пользователей" (team) для указанного GUID.</td>
 </tr>
@@ -210,6 +235,10 @@ Workflow
 <tr>
 <td>GUID to Workflow</td>
 <td>Действие возвращает сущность "Бизнес-процесс" (workflow) для указанного GUID.</td>
+</tr>
+<tr>
+<td>:new: Parse Entity Dynamic URL</td>
+<td>Parsing the dynamic URL and getting the parameters of the entity.</td>
 </tr>
 </table>
 
@@ -293,6 +322,19 @@ Workflow
 </tr>
 </table>
 
+## Process Tools
+
+A components for working with processes.
+
+Plug-ins
+
+<table>
+<tr>
+<td>Execute Workflow</td>
+<td>Execute workflow.</td>
+</tr>
+</table>
+
 ## RabbitMQ Tools
 
 Набор компонентов для работы с RabbitMQ.
@@ -301,7 +343,7 @@ Workflow
 
 <table>
 <tr>
-<td>:new: Send</td>
+<td>Send</td>
 <td>Отправка сообщения в RabbitMQ.</td>
 </tr>
 </table>
@@ -338,20 +380,26 @@ Workflow
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#characters">Characters</a></td>
 <td>Специальные символы (пробел, перевод строки).</td>
 </tr><tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#jaro-distance">Jaro Distance</a></td>
+<td>From BASE64</td>
+<td>Декодирование строки из BASE64.</td>
+</tr><tr>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#jaro-distance">Jaro Distance</a></td>
 <td>Сходство Джаро между двумя строками.</td>
 </tr><tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#jaro-winkler-distance">Jaro-Winkler Distance</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#jaro-winkler-distance">Jaro-Winkler Distance</a></td>
 <td>Сходство Джаро—Винклера между двумя строками.</td>
 </tr><tr>
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#replace">Replace</a></td>
 <td>Замена подстроки в строке.</td>
 </tr><tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#strings">Strings</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#strings">Strings</a></td>
 <td>Специальные строки (GUID).</td>
 </tr><tr>
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#substring">Substring</a></td>
 <td>Получение подстроки.</td>
+</tr><tr>
+<td>To BASE64</td>
+<td>Кодирование строки в BASE64.</td>
 </tr><tr>
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#to-first-title-case">To First Title Case</a></td>
 <td>Перевод первой буквы строки в верхний регистр.</td>
@@ -378,11 +426,11 @@ Web
 
 <table>
 <tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/UI-Tools#icons">Icons</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/UI-Tools#icons">Icons</a></td>
 <td>Library for creating icons in the form header.</td>
 </tr>
 <tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/UI-Tools#tabs">Tabs</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/UI-Tools#tabs">Tabs</a></td>
 <td>Формирование на форме вкладок вместо раскрывающихся разделов.</td>
 </tr>
 </table>

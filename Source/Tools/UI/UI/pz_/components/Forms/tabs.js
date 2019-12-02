@@ -1,5 +1,5 @@
 ﻿/*!
- * @version 8.0.1.0
+ * @version 8.0.1.1
  * @name Form Tabs Library
  */
 
@@ -10,8 +10,7 @@ typeof (PZone.UI.Forms) === 'undefined' && (PZone.UI.Forms = {});
 
 
 PZone.UI.Forms.tabs = function () {
-    var $ = jQuery;
-    typeof ($) === 'undefined' && !!parent && ($ = parent.jQuery);
+    var $ = typeof (jQuery) !== 'undefined' ? jQuery : !!parent && typeof (parent.jQuery) !== 'undefined' ? parent.jQuery : 'undefined';
     if (typeof ($) === 'undefined') {
         console.log('Не удалось использовать закладок. Не удалось найти jQuery.');
         return;

@@ -90,9 +90,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Workflow\CreateAnnotation.cs" />
     <Compile Include="Workflow\EntityToGuid.cs" />
     <Compile Include="Workflow\GuidToAccount.cs" />
-    <Compile Include="Workflow\GuidToActivity.cs" />
+    <Compile Include="Workflow\GuidToEmail.cs" />
+    <Compile Include="Workflow\GuidToFax.cs" />
+    <Compile Include="Workflow\GuidToLetter.cs" />
+    <Compile Include="Workflow\GuidToPhoneCall.cs" />
     <Compile Include="Workflow\GuidToBusinessUnit.cs" />
     <Compile Include="Workflow\GuidToContact.cs" />
     <Compile Include="Workflow\GuidToCurrency.cs" />
@@ -105,14 +109,16 @@
     <Compile Include="Workflow\GuidToProduct.cs" />
     <Compile Include="Workflow\GuidToQueue.cs" />
     <Compile Include="Workflow\GuidToQuote.cs" />
+    <Compile Include="Workflow\GuidToTask.cs" />
     <Compile Include="Workflow\GuidToTeam.cs" />
     <Compile Include="Workflow\GuidToUser.cs" />
     <Compile Include="Workflow\GuidToWorkflow.cs" />
+    <Compile Include="Workflow\ParseEntityDynamicUrl.cs" />
     <Compile Include="Workflow\SwitchProcess.cs" />
     <Compile Include="Workflow\Delete.cs" />
     <Compile Include="Workflow\DeleteCurrent.cs" />
     <Compile Include="Workflow\CurrentEntityId.cs" />
-    <Compile Include="Workflow\CreateAnnotation.cs" />
+    <Compile Include="Workflow\CreateAnnotationWithTextFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Workflow\AccountToGuid.cs" />
   </ItemGroup>

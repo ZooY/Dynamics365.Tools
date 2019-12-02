@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Activities;
+using System.Text;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Workflow;
 using PZone.Xrm;
@@ -9,9 +10,9 @@ using PZone.Xrm.Workflow;
 namespace PZone.EntityTools.Workflow
 {
     /// <summary>
-    /// Создание примечания для произвольной сущности.
+    /// Создание примечания с вложением текстового файла для произвольной сущности.
     /// </summary>
-    public class CreateAnnotation : WorkflowBase
+    public class CreateAnnotationWithTextFile : WorkflowBase
     {
         /// <summary>
         /// Имя сущности.
@@ -54,14 +55,15 @@ namespace PZone.EntityTools.Workflow
         /// MIME-тип вложения примечания.
         /// </summary>
         [Input("File MIME Type")]
+        [Default("text/plain")]
         public InArgument<string> FileMimeType { get; set; }
 
 
         /// <summary>
         /// Содержимое файла вложения примечания в формат BASE64.
         /// </summary>
-        [Input("File Content (BASE64 Encoding)")]
-        public InArgument<string> FileBase64Content { get; set; }
+        [Input("File Content")]
+        public InArgument<string> FileContent { get; set; }
 
 
         /// <inheritdoc />
@@ -77,9 +79,10 @@ namespace PZone.EntityTools.Workflow
             var fileName = FileName.Get(context);
             if (!string.IsNullOrWhiteSpace(fileName))
             {
+                var content = FileContent.Get(context);
                 entity["filename"] = fileName;
                 entity["mimetype"] = FileMimeType.Get(context);
-                entity["documentbody"] = FileBase64Content.Get(context);
+                entity["documentbody"] = string.IsNullOrWhiteSpace(content) ? "" : Convert.ToBase64String(Encoding.UTF8.GetBytes(content));
             }
             context.Service.Create(entity);
         }
