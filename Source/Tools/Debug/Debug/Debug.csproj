@@ -57,9 +57,8 @@
       <HintPath>..\..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationFramework" />
-    <Reference Include="PZone.Core, Version=1.0.6.0, Culture=neutral, PublicKeyToken=e92de928f327206a, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\PZone.SDK.Core.1.0.6\lib\net40\PZone.Core.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="PZone.Core, Version=1.1.0.0, Culture=neutral, PublicKeyToken=e92de928f327206a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PZone.SDK.Core.1.1.0.0\lib\net40\PZone.Core.dll</HintPath>
     </Reference>
     <Reference Include="PZone.SDK.Xrm, Version=8.2.1.0, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\PZone.SDK.XRM.8.2.1\lib\net452\PZone.SDK.Xrm.dll</HintPath>
@@ -67,9 +66,8 @@
     <Reference Include="PZone.SDK.Xrm.Plugins, Version=8.2.1.0, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\PZone.SDK.XRM.Plugins.8.2.1\lib\net452\PZone.SDK.Xrm.Plugins.dll</HintPath>
     </Reference>
-    <Reference Include="PZone.SDK.Xrm.Workflow, Version=8.0.0.0, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\PZone.SDK.XRM.Workflow.8.0.0.0\lib\net452\PZone.SDK.Xrm.Workflow.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="PZone.SDK.Xrm.Workflow, Version=8.0.3.0, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PZone.SDK.XRM.Workflow.8.0.3.0\lib\net452\PZone.SDK.Xrm.Workflow.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Activities" />
