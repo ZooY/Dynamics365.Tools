@@ -177,12 +177,12 @@ Workflow
 <td>Действие возвращает сущность "Валюта" (transactioncurrency) для указанного GUID.</td>
 </tr>
 <tr>
-<td>GUID to E-mail</td>
-<td>:new: Действие возвращает сущность "E-mail" (email) для указанного GUID.</td>
+<td>:new: GUID to E-mail</td>
+<td>Действие возвращает сущность "E-mail" (email) для указанного GUID.</td>
 </tr>
 <tr>
-<td>GUID to Fax</td>
-<td>:new: Действие возвращает сущность "Факс" (fax) для указанного GUID.</td>
+<td>:new: GUID to Fax</td>
+<td>Действие возвращает сущность "Факс" (fax) для указанного GUID.</td>
 </tr>
 <tr>
 <td>GUID to Invoice</td>
@@ -193,8 +193,8 @@ Workflow
 <td>Действие возвращает сущность "Интерес" (lead) для указанного GUID.</td>
 </tr>
 <tr>
-<td>GUID to Letter</td>
-<td>:new: Действие возвращает сущность "Письмо" (letter) для указанного GUID.</td>
+<td>:new: GUID to Letter</td>
+<td>Действие возвращает сущность "Письмо" (letter) для указанного GUID.</td>
 </tr>
 <tr>
 <td>GUID to Marketing List</td>
@@ -221,8 +221,8 @@ Workflow
 <td>Действие возвращает сущности "Предложение" (quote) и "Продукт предложения" (quotedetail) для указанного GUID.</td>
 </tr>
 <tr>
-<td>GUID to Task</td>
-<td>:new: Действие возвращает сущность "Задача" (task) для указанного GUID.</td>
+<td>:new: GUID to Task</td>
+<td>Действие возвращает сущность "Задача" (task) для указанного GUID.</td>
 </tr>
 <tr>
 <td>GUID to Team</td>
