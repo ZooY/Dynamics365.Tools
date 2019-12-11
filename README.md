@@ -278,6 +278,10 @@ Workflow
 <td>Получение количества записей, возвращаемых запросом FetchXML.</td>
 </tr>
 <tr>
+<td>:new: Delete</td>
+<td>Удаление записей, найденных с помощью запроса FetchXML.</td>
+</tr>
+<tr>
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#median">Median</a></td>
 <td>Вычисление медианы ряда числовых значений, возвращаемых запросом FetchXML.</td>
 </tr>
