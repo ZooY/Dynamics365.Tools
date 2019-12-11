@@ -141,11 +141,23 @@ Workflow
 <td>Getting the GUID of the Account entity.</td>
 </tr>
 <tr>
+<td>:new: Add Account to Marketing List</td>
+<td>Добавление организации в маркетинговый список.</td>
+</tr>
+<tr>
+<td>:new: Add Contact to Marketing List</td>
+<td>Добавление контакта в маркетинговый список.</td>
+</tr>
+<tr>
+<td>:new: Add Lead to Marketing List</td>
+<td>Добавление интереса в маркетинговый список.</td>
+</tr>
+<tr>
 <td>Create Annotation</td>
 <td>Create annotation for any entity.</td>
 </tr>
 <tr>
-<td>:new: Create Annotation with Text File</td>
+<td>Create Annotation with Text File</td>
 <td>Create annotation with text file attachment for any entity.</td>
 </tr>
 <tr>
@@ -177,11 +189,11 @@ Workflow
 <td>Действие возвращает сущность "Валюта" (transactioncurrency) для указанного GUID.</td>
 </tr>
 <tr>
-<td>:new: GUID to E-mail</td>
+<td>GUID to E-mail</td>
 <td>Действие возвращает сущность "E-mail" (email) для указанного GUID.</td>
 </tr>
 <tr>
-<td>:new: GUID to Fax</td>
+<td>GUID to Fax</td>
 <td>Действие возвращает сущность "Факс" (fax) для указанного GUID.</td>
 </tr>
 <tr>
@@ -193,7 +205,7 @@ Workflow
 <td>Действие возвращает сущность "Интерес" (lead) для указанного GUID.</td>
 </tr>
 <tr>
-<td>:new: GUID to Letter</td>
+<td>GUID to Letter</td>
 <td>Действие возвращает сущность "Письмо" (letter) для указанного GUID.</td>
 </tr>
 <tr>
@@ -221,7 +233,7 @@ Workflow
 <td>Действие возвращает сущности "Предложение" (quote) и "Продукт предложения" (quotedetail) для указанного GUID.</td>
 </tr>
 <tr>
-<td>:new: GUID to Task</td>
+<td>GUID to Task</td>
 <td>Действие возвращает сущность "Задача" (task) для указанного GUID.</td>
 </tr>
 <tr>
@@ -237,7 +249,7 @@ Workflow
 <td>Действие возвращает сущность "Бизнес-процесс" (workflow) для указанного GUID.</td>
 </tr>
 <tr>
-<td>:new: Parse Entity Dynamic URL</td>
+<td>Parse Entity Dynamic URL</td>
 <td>Parsing the dynamic URL and getting the parameters of the entity.</td>
 </tr>
 </table>

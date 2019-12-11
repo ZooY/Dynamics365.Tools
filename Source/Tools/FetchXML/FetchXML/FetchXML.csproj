@@ -41,6 +41,7 @@
     <Compile Include="Workflow\AssignUser.cs" />
     <Compile Include="Workflow\Average.cs" />
     <Compile Include="Workflow\Concat.cs" />
+    <Compile Include="Workflow\Delete.cs" />
     <Compile Include="Workflow\ExecuteWorkflowFromFetch.cs" />
     <Compile Include="Workflow\Count.cs" />
     <Compile Include="Workflow\Median.cs" />

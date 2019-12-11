@@ -88,6 +88,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Workflow\AddAccountToList.cs" />
+    <Compile Include="Workflow\AddContactToList.cs" />
+    <Compile Include="Workflow\AddEntityToList.cs" />
+    <Compile Include="Workflow\AddLeadToList.cs" />
     <Compile Include="Workflow\CreateAnnotation.cs" />
     <Compile Include="Workflow\EntityToGuid.cs" />
     <Compile Include="Workflow\GuidToAccount.cs" />

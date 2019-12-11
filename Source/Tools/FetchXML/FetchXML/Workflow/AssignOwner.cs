@@ -6,6 +6,7 @@ using Microsoft.Xrm.Sdk.Workflow;
 using PZone.Xrm.Workflow;
 using PZone.Xrm;
 
+
 namespace PZone.FetchXmlTools.Workflow
 {
     public abstract class AssignOwner : FetchXmlWorkflow
