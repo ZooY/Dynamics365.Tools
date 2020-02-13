@@ -34,6 +34,14 @@ namespace PZone.FileTools.Workflow
 
 
         /// <summary>
+        /// Выполнение запросов в CRM от имени системного пользователя.
+        /// </summary>
+        [Input("Execute as SYSTEM User")]
+        [Default("true")]
+        public InArgument<bool> ExecureAsSystem { get; set; }
+
+
+        /// <summary>
         /// MIME-тип файла.
         /// </summary>
         [Output("MIME Type")]
@@ -61,7 +69,8 @@ namespace PZone.FileTools.Workflow
     <order attribute='createdon' descending='true' />
   </entity>
 </fetch>";
-            var response = context.Service.RetrieveMultiple(new FetchExpression(query));
+            var service = ExecureAsSystem.Get(context) ? context.SystemService : context.Service;
+            var response = service.RetrieveMultiple(new FetchExpression(query));
             if (response.Entities.Count < 1)
                 return;
             var annotation = response.Entities.First();

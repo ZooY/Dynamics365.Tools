@@ -16,5 +16,12 @@ namespace PZone.FetchXmlTools.Workflow
         [RequiredArgument]
         [Input("FetchXML Query")]
         public InArgument<string> FetchXml { get; set; }
+        
+
+        /// <summary>
+        /// Выполнение запросов в CRM от имени системного пользователя.
+        /// </summary>
+        [Input("Execute as SYSTEM User")]
+        public InArgument<bool> ExecureAsSystem { get; set; }
     }
 }

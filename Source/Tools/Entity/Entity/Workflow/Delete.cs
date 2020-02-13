@@ -25,11 +25,19 @@ namespace PZone.EntityTools.Workflow
         [RequiredArgument]
         [Input("Entity GUID")]
         public InArgument<string> EntityId { get; set; }
+        
+
+        /// <summary>
+        /// Выполнение запросов в CRM от имени системного пользователя.
+        /// </summary>
+        [Input("Execute as SYSTEM User")]
+        public InArgument<bool> ExecureAsSystem { get; set; }
 
 
         /// <inheritdoc />
         protected override void Execute(Context context)
         {
+            var service = ExecureAsSystem.Get(context) ? context.SystemService : context.Service;
             context.Service.Delete(EntityName.Get(context), Guid.Parse(EntityId.Get(context)));
         }
     }

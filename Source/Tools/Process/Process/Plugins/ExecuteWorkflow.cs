@@ -46,7 +46,7 @@ namespace PZone.ProcessTools.Plugins
             if (string.IsNullOrWhiteSpace(_config.WorkflowName))
                 throw new InvalidPluginExecutionException("Plug-in configuration error. Workflow ID and Name is empty.");
 
-            var workflows = context.Service.RetrieveMultiple($@"
+            var workflows = context.SystemService.RetrieveMultiple($@"
 <fetch top='2' no-lock='true'>
   <entity name='workflow'>
     <attribute name='workflowid' />

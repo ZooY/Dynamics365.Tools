@@ -33,7 +33,9 @@ namespace PZone.FetchXmlTools.Workflow
             if (string.IsNullOrWhiteSpace(query))
                 return;
 
-            var entities = context.Service.RetrieveMultiple(query).Entities;
+            var service = ExecureAsSystem.Get(context) ? context.SystemService : context.Service;
+
+            var entities = service.RetrieveMultiple(query).Entities;
 
             FindedCount.Set(context, entities.Count);
 
@@ -56,9 +58,7 @@ namespace PZone.FetchXmlTools.Workflow
             {
                 Target = entity.ToEntityReference()
             }));
-
-            var service = context.SourceActivityContext.GetExtension<IOrganizationServiceFactory>().CreateOrganizationService(null);
-
+            
             var responses = (ExecuteMultipleResponse)service.Execute(request);
             if (!responses.IsFaulted)
             {

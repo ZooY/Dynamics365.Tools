@@ -43,7 +43,9 @@ namespace PZone.FetchXmlTools.Workflow
             if (string.IsNullOrWhiteSpace(query))
                 return;
 
-            var result = context.Service.RetrieveMultiple(query);
+            var service = ExecureAsSystem.Get(context) ? context.SystemService : context.Service;
+
+            var result = service.RetrieveMultiple(query);
             ResultAsDecimal.Set(context, result.Entities.Count);
             ResultAsDouble.Set(context, Convert.ToDouble(result.Entities.Count));
             ResultAsInteger.Set(context, Convert.ToInt32(result.Entities.Count));

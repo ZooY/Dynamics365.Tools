@@ -20,15 +20,16 @@ namespace PZone.FetchXmlTools.Workflow
 
         protected void Execute(Context context, EntityReference ownerRef)
         {
+            var service = ExecureAsSystem.Get(context) ? context.SystemService : context.Service;
             var fetchXml = FetchXml.Get(context);
-            var entities = context.Service.RetrieveMultiple(fetchXml).Entities;
+            var entities = service.RetrieveMultiple(fetchXml).Entities;
             var affectedEntities = 0;
             foreach (var entity in entities)
             {
                 try
                 {
                     var request = new AssignRequest { Assignee = ownerRef, Target = entity.ToEntityReference() };
-                    context.Service.Execute(request);
+                    service.Execute(request);
                     affectedEntities++;
                 }
                 catch (Exception ex)

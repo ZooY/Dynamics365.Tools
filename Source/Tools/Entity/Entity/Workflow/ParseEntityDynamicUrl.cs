@@ -67,7 +67,7 @@ namespace PZone.EntityTools.Workflow
                     Properties = new MetadataPropertiesExpression { AllProperties = false, PropertyNames = { "LogicalName" } }
                 }
             };
-            var response = (RetrieveMetadataChangesResponse)context.Service.Execute(retrieveMetadataChangesRequest);
+            var response = (RetrieveMetadataChangesResponse)context.SystemService.Execute(retrieveMetadataChangesRequest);
             if (response.EntityMetadata.Count == 1)
                 EntityName.Set(context, response.EntityMetadata[0].LogicalName);
         }

@@ -62,6 +62,13 @@ namespace PZone.EntityTools.Workflow
         /// </summary>
         [Input("File Content (BASE64 Encoding)")]
         public InArgument<string> FileBase64Content { get; set; }
+        
+
+        /// <summary>
+        /// Выполнение запросов в CRM от имени системного пользователя.
+        /// </summary>
+        [Input("Execute as SYSTEM User")]
+        public InArgument<bool> ExecureAsSystem { get; set; }
 
 
         /// <inheritdoc />
@@ -81,7 +88,8 @@ namespace PZone.EntityTools.Workflow
                 entity["mimetype"] = FileMimeType.Get(context);
                 entity["documentbody"] = FileBase64Content.Get(context);
             }
-            context.Service.Create(entity);
+            var service = ExecureAsSystem.Get(context) ? context.SystemService : context.Service;
+            service.Create(entity);
         }
     }
 }

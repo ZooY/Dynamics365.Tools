@@ -40,7 +40,7 @@ namespace PZone.FileTools.Workflow
         protected override void Execute(Context context)
         {
             var name = WebResourceName.Get(context);
-            var webResource = context.Service.RetrieveMultiple(new FetchExpression($@"<fetch top=""1"" no-lock=""true"" >
+            var webResource = context.SystemService.RetrieveMultiple(new FetchExpression($@"<fetch top=""1"" no-lock=""true"" >
   <entity name=""webresource"" >
     <attribute name=""content"" />
     <filter>

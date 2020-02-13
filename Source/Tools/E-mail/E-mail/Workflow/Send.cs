@@ -21,12 +21,20 @@ namespace PZone.EmailTools.Workflow
         public InArgument<EntityReference> Email { get; set; }
 
 
+        /// <summary>
+        /// Выполнение запросов в CRM от имени системного пользователя.
+        /// </summary>
+        [Input("Execute as SYSTEM User")]
+        public InArgument<bool> ExecureAsSystem { get; set; }
+
+
         /// <inheritdoc />
         protected override void Execute(Context context)
         {
             var emailRef = Email.Get(context);
             var request = new SendEmailRequest { EmailId = emailRef.Id, TrackingToken = "", IssueSend = true };
-            context.Service.Execute(request);
+            var service = ExecureAsSystem.Get(context) ? context.SystemService : context.Service;
+            service.Execute(request);
         }
     }
 }
