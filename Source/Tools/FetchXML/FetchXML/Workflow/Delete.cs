@@ -33,9 +33,7 @@ namespace PZone.FetchXmlTools.Workflow
             if (string.IsNullOrWhiteSpace(query))
                 return;
 
-            var service = ExecureAsSystem.Get(context) ? context.SystemService : context.Service;
-
-            var entities = service.RetrieveMultiple(query).Entities;
+            var entities = context.Service.RetrieveMultiple(query).Entities;
 
             FindedCount.Set(context, entities.Count);
 
@@ -59,7 +57,7 @@ namespace PZone.FetchXmlTools.Workflow
                 Target = entity.ToEntityReference()
             }));
             
-            var responses = (ExecuteMultipleResponse)service.Execute(request);
+            var responses = (ExecuteMultipleResponse)context.Service.Execute(request);
             if (!responses.IsFaulted)
             {
                 DeletedCount.Set(context, entities.Count);

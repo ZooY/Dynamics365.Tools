@@ -67,8 +67,8 @@
     <Reference Include="PZone.SDK.Xrm.Plugins, Version=8.2.3.1, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\PZone.SDK.XRM.Plugins.8.2.3.1\lib\net452\PZone.SDK.Xrm.Plugins.dll</HintPath>
     </Reference>
-    <Reference Include="PZone.SDK.Xrm.Workflow, Version=8.0.3.0, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\PZone.SDK.XRM.Workflow.8.0.3.0\lib\net452\PZone.SDK.Xrm.Workflow.dll</HintPath>
+    <Reference Include="PZone.SDK.Xrm.Workflow, Version=8.0.3.2, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PZone.SDK.XRM.Workflow.8.0.3.2\lib\net452\PZone.SDK.Xrm.Workflow.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Activities" />

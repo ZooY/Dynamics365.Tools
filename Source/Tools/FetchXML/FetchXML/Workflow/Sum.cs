@@ -51,8 +51,7 @@ namespace PZone.FetchXmlTools.Workflow
         protected override void Execute(Context context)
         {
             var query = FetchXml.Get(context);
-            var service = ExecureAsSystem.Get(context) ? context.SystemService : context.Service;
-            var result = service.RetrieveMultiple(query);
+            var result = context.Service.RetrieveMultiple(query);
             if (result.Entities.Count < 1)
                 return;
 

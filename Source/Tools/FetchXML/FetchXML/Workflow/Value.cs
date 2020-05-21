@@ -91,7 +91,9 @@ namespace PZone.FetchXmlTools.Workflow
             if (string.IsNullOrWhiteSpace(query))
                 return;
 
-            var service = ExecureAsSystem.Get(context) ? context.SystemService : context.Service;
+
+            var cont = context.SourceActivityContext.GetContext();
+            var service = context.SourceActivityContext.GetExtension<IOrganizationServiceFactory>().CreateOrganizationService(cont.UserId);
 
             var result = service.RetrieveMultiple(query);
             if (result.Entities.Count < 1)
