@@ -46,9 +46,10 @@
     <Compile Include="Workflow\Count.cs" />
     <Compile Include="Workflow\Median.cs" />
     <Compile Include="Workflow\Sum.cs" />
-    <Compile Include="Workflow\Value.cs" />
+    <Compile Include="Workflow\EntityAsJson.cs" />
     <Compile Include="Workflow\FetchXmlWorkflow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workflow\Value.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">

@@ -141,15 +141,15 @@ Workflow
 <td>Getting the GUID of the Account entity.</td>
 </tr>
 <tr>
-<td>:new: Add Account to Marketing List</td>
+<td>Add Account to Marketing List</td>
 <td>Добавление организации в маркетинговый список.</td>
 </tr>
 <tr>
-<td>:new: Add Contact to Marketing List</td>
+<td>Add Contact to Marketing List</td>
 <td>Добавление контакта в маркетинговый список.</td>
 </tr>
 <tr>
-<td>:new: Add Lead to Marketing List</td>
+<td>Add Lead to Marketing List</td>
 <td>Добавление интереса в маркетинговый список.</td>
 </tr>
 <tr>
@@ -278,8 +278,12 @@ Workflow
 <td>Получение количества записей, возвращаемых запросом FetchXML.</td>
 </tr>
 <tr>
-<td>:new: Delete</td>
+<td>Delete</td>
 <td>Удаление записей, найденных с помощью запроса FetchXML.</td>
+</tr>
+<tr>
+<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#entity-as-json">Entity as JSON</a></td>
+<td>Получение сущности в виде строки в формате JSON.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#median">Median</a></td>
