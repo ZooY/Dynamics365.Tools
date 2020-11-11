@@ -11,7 +11,7 @@ namespace PZone.StringTools.Workflow
     public class Strings : WorkflowBase
     {
         /// <summary>
-        /// GUID.
+        /// Случайный GUID.
         /// </summary>
         [Output("GUID")]
         public OutArgument<string> Guid { get; set; }

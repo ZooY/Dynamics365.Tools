@@ -97,6 +97,7 @@
     <Compile Include="Workflow\GuidToAccount.cs" />
     <Compile Include="Workflow\GuidToEmail.cs" />
     <Compile Include="Workflow\GuidToFax.cs" />
+    <Compile Include="Workflow\GuidToIncident.cs" />
     <Compile Include="Workflow\GuidToLetter.cs" />
     <Compile Include="Workflow\GuidToPhoneCall.cs" />
     <Compile Include="Workflow\GuidToBusinessUnit.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Workflow\GuidToQuote.cs" />
     <Compile Include="Workflow\GuidToTask.cs" />
     <Compile Include="Workflow\GuidToTeam.cs" />
+    <Compile Include="Workflow\GuidToTheme.cs" />
     <Compile Include="Workflow\GuidToUser.cs" />
     <Compile Include="Workflow\GuidToWorkflow.cs" />
     <Compile Include="Workflow\ParseEntityDynamicUrl.cs" />

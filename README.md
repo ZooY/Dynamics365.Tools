@@ -197,6 +197,10 @@ Workflow
 <td>Действие возвращает сущность "Факс" (fax) для указанного GUID.</td>
 </tr>
 <tr>
+<td>:new: GUID to Incident</td>
+<td>Действие возвращает сущность "Обращение" (incident) для указанного GUID.</td>
+</tr>
+<tr>
 <td>GUID to Invoice</td>
 <td> Действие возвращает сущности "Счет" (invoice) и "Продукт счета" (invoicedetail) для указанного GUID.</td>
 </tr>
@@ -241,6 +245,10 @@ Workflow
 <td>Действие возвращает сущность "Группа пользователей" (team) для указанного GUID.</td>
 </tr>
 <tr>
+<td>:new: GUID to Theme</td>
+<td>Действие возвращает сущность "Тема" (theme) для указанного GUID.</td>
+</tr>
+<tr>
 <td>GUID to User</td>
 <td>Действие возвращает сущность "Пользователь" (systemuser) для указанного GUID.</td>
 </tr>
@@ -282,8 +290,20 @@ Workflow
 <td>Удаление записей, найденных с помощью запроса FetchXML.</td>
 </tr>
 <tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#entity-as-json">Entity as JSON</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#entity-as-json">Entity as JSON</a></td>
 <td>Получение сущности в виде строки в формате JSON.</td>
+</tr>
+<tr>
+<td>:new: Execute Action</td>
+<td>Выполнение Action по результатам выполнения FetchXML.</td>
+</tr>
+<tr>
+<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#execute-workflow">Execute Workflow</a></td>
+<td>Запуск Workflow по результатам выполнения FetchXML.</td>
+</tr>
+<tr>
+<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#find-task">Find Task</a></td>
+<td>Поиск Задачи с помощью FetchXML-запроса.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#median">Median</a></td>
@@ -413,7 +433,7 @@ Workflow
 <td>Замена подстроки в строке.</td>
 </tr><tr>
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#strings">Strings</a></td>
-<td>Специальные строки (GUID).</td>
+<td>Специальные строки (Случайный GUID).</td>
 </tr><tr>
 <td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/String-Tools#substring">Substring</a></td>
 <td>Получение подстроки.</td>

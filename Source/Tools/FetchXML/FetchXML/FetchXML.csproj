@@ -42,8 +42,10 @@
     <Compile Include="Workflow\Average.cs" />
     <Compile Include="Workflow\Concat.cs" />
     <Compile Include="Workflow\Delete.cs" />
-    <Compile Include="Workflow\ExecuteWorkflowFromFetch.cs" />
+    <Compile Include="Workflow\ExecuteAction.cs" />
+    <Compile Include="Workflow\ExecuteWorkflow.cs" />
     <Compile Include="Workflow\Count.cs" />
+    <Compile Include="Workflow\FindTask.cs" />
     <Compile Include="Workflow\Median.cs" />
     <Compile Include="Workflow\Sum.cs" />
     <Compile Include="Workflow\EntityAsJson.cs" />
