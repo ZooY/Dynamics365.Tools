@@ -72,8 +72,8 @@
       <HintPath>..\..\..\packages\PZone.SDK.XRM.Testing.8.0.0.1\lib\net452\PZone.SDK.Xrm.Testing.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="PZone.SDK.Xrm.Workflow, Version=8.0.3.2, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\PZone.SDK.XRM.Workflow.8.0.3.2\lib\net452\PZone.SDK.Xrm.Workflow.dll</HintPath>
+    <Reference Include="PZone.SDK.Xrm.Workflow, Version=8.0.3.3, Culture=neutral, PublicKeyToken=4394d41fdc99a9c8, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\PZone.SDK.XRM.Workflow.8.0.3.3\lib\net452\PZone.SDK.Xrm.Workflow.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Activities" />
