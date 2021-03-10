@@ -9,9 +9,10 @@ using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Messages;
 using Microsoft.Xrm.Sdk.Query;
 using Microsoft.Xrm.Sdk.Workflow;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using PZone.Xrm.Workflow;
-
+using PZone.Xrm.Workflow.Exceptions;
 
 namespace PZone.FetchXmlTools.Workflow
 {
@@ -72,11 +73,11 @@ namespace PZone.FetchXmlTools.Workflow
             // Получение имени и параметров действия.
             if (string.IsNullOrEmpty(_actionName))
                 RetrieveActionProperties(context.SystemService, actionRef, out _actionName, out _actionProperties);
-            
+
             // Формирвоание параметров действия.
             var parameters = new Dictionary<string, object>();
             foreach (var property in JObject.Parse(parametersJsonStr).Properties())
-                parameters.Add(property.Name, property.ToObject(_actionProperties[property.Name]));
+                parameters.Add(property.Name, property.Value.ToObject(_actionProperties[property.Name]));
 
             var moreRecords = false;
             int page = 1;
@@ -113,8 +114,19 @@ namespace PZone.FetchXmlTools.Workflow
                 if (response.IsFaulted)
                 {
                     var faultResponse = response.Responses.FirstOrDefault(r => r.Fault != null);
-                    var faultWorkflowRequest = (ExecuteWorkflowRequest)requests.Requests[faultResponse.RequestIndex];
-                    SetError(context, $"A record of the \"{collection.EntityName}\" type with the ID \"{faultWorkflowRequest.EntityId}\" returned an error during execution of the action {(string.IsNullOrEmpty(actionRef.Name) ? "" : $"\"{actionRef.Name}\" ")}with the ID \"{actionRef.Id}\".");
+
+                    var message = string.Empty;
+                    var fault = faultResponse.Fault;
+                    do
+                    {
+                        message += " " + fault.Message + (fault.Message.EndsWith(".") ? "" : ".");
+                        fault = fault.InnerFault;
+                    }
+                    while (fault != null);
+
+
+                    throw new InvalidWorkflowExecutionException($"A record of the \"{collection.EntityName}\" type with the ID \"{((EntityReference)requests.Requests[faultResponse.RequestIndex]["Target"]).Id}\" returned an error during execution of the action {(string.IsNullOrEmpty(actionRef.Name) ? "" : $"\"{actionRef.Name}\" ")}with the ID \"{actionRef.Id}\".{message}");
+                    SetError(context, $"A record of the \"{collection.EntityName}\" type with the ID \"{((EntityReference)requests.Requests[faultResponse.RequestIndex]["Target"]).Id}\" returned an error during execution of the action {(string.IsNullOrEmpty(actionRef.Name) ? "" : $"\"{actionRef.Name}\" ")}with the ID \"{actionRef.Id}\".");
                     return;
                 }
 
@@ -135,22 +147,20 @@ namespace PZone.FetchXmlTools.Workflow
         private void RetrieveActionProperties(IOrganizationService service, EntityReference actionRef, out string actionLogicalName, out Dictionary<string, Type> properties)
         {
             // Получаем название действия.
-            var action = service.Retrieve(actionRef.LogicalName, actionRef.Id, new ColumnSet("solutionid", "uniquename", "xaml"));
-            var solutionId = action.GetAttributeValue<Guid>("solutionid");
             var query = $@"
 <fetch top='1' no-lock='true'>
-  <entity name='solution'>
+  <entity name='workflow'>
+    <attribute name='xaml' />
     <filter>
-      <condition attribute='solutionid' operator='eq' value='{solutionId}'/>
+      <condition attribute='workflowid' operator='eq' value='{actionRef.Id}'/>
     </filter>
-    <link-entity name='publisher' from='publisherid' to='publisherid' alias='publisher'>
-      <attribute name='customizationprefix' />
+    <link-entity name='sdkmessage' from='sdkmessageid' to='sdkmessageid' alias='Message'>
+      <attribute name='name' />
     </link-entity>
   </entity>
 </fetch>";
-            var solution = service.RetrieveMultiple(new FetchExpression(query)).Entities.FirstOrDefault();
-            var prefix = solution.GetAttributeValue<AliasedValue>("publisher.customizationprefix").Value.ToString();
-            actionLogicalName = prefix + "_" + action.GetAttributeValue<string>("uniquename");
+            var action = service.RetrieveMultiple(new FetchExpression(query)).Entities.FirstOrDefault();
+            actionLogicalName = action.GetAttributeValue<AliasedValue>("Message.name").Value.ToString();
 
             // Получаем список входных параметров действия.
             var xaml = action.GetAttributeValue<string>("xaml");

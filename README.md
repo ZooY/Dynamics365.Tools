@@ -197,7 +197,7 @@ Workflow
 <td>Действие возвращает сущность "Факс" (fax) для указанного GUID.</td>
 </tr>
 <tr>
-<td>:new: GUID to Incident</td>
+<td>GUID to Incident</td>
 <td>Действие возвращает сущность "Обращение" (incident) для указанного GUID.</td>
 </tr>
 <tr>
@@ -245,7 +245,7 @@ Workflow
 <td>Действие возвращает сущность "Группа пользователей" (team) для указанного GUID.</td>
 </tr>
 <tr>
-<td>:new: GUID to Theme</td>
+<td>GUID to Theme</td>
 <td>Действие возвращает сущность "Тема" (theme) для указанного GUID.</td>
 </tr>
 <tr>
@@ -294,15 +294,15 @@ Workflow
 <td>Получение сущности в виде строки в формате JSON.</td>
 </tr>
 <tr>
-<td>:new: Execute Action</td>
+<td>Execute Action</td>
 <td>Выполнение Action по результатам выполнения FetchXML.</td>
 </tr>
 <tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#execute-workflow">Execute Workflow</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#execute-workflow">Execute Workflow</a></td>
 <td>Запуск Workflow по результатам выполнения FetchXML.</td>
 </tr>
 <tr>
-<td>:new: <a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#find-task">Find Task</a></td>
+<td><a href="https://github.com/ZooY/Dynamics365.Tools/wiki/FetchXML-Tools#find-task">Find Task</a></td>
 <td>Поиск Задачи с помощью FetchXML-запроса.</td>
 </tr>
 <tr>
@@ -346,6 +346,23 @@ Workflow
 <tr>
 <td>Get Value</td>
 <td>Получение значения из строки формата JSON.</td>
+</tr>
+</table>
+
+## Math Tools
+
+Сomponents for mathematical calculations.
+
+Workflow
+
+<table>
+<tr>
+<td>:new: Diff</td>
+<td>Получение разницы между двумя числами в числовом и процентном выражении.</td>
+</tr>
+<tr>
+<td>:new: Sum</td>
+<td>Получение суммы двух чисел.</td>
 </tr>
 </table>
 
