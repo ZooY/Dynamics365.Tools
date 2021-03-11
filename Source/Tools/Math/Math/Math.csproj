@@ -39,6 +39,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Workflow\Diff.cs" />
+    <Compile Include="Workflow\Division.cs" />
+    <Compile Include="Workflow\Multiplication.cs" />
     <Compile Include="Workflow\Sum.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -91,4 +93,8 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>md "$(TargetDir)Release"
+"$(SolutionDir)packages\ILMerge.2.14.1208\tools\ILMerge" /closed /t:library /targetplatform:"v4,C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2" /xmldocs /copyattrs /internalize /keyfile:"$(ProjectDir)PZone.snk" /out:"$(TargetDir)Release\$(TargetFileName)" "$(TargetPath)" "$(TargetDir)Newtonsoft.Json.dll" "$(TargetDir)PZone.Core.dll" "$(TargetDir)PZone.SDK.Xrm.dll" "$(TargetDir)PZone.SDK.Xrm.Workflow.dll"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
