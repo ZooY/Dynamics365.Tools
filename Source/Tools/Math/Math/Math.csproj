@@ -41,6 +41,7 @@
     <Compile Include="Workflow\Diff.cs" />
     <Compile Include="Workflow\Division.cs" />
     <Compile Include="Workflow\Multiplication.cs" />
+    <Compile Include="Workflow\Round.cs" />
     <Compile Include="Workflow\Sum.cs" />
   </ItemGroup>
   <ItemGroup>
